@@ -340,6 +340,37 @@ p { margin: 0 0 var(--space-3); }
   z-index: 1000;
 }
 
+/* ----- Fotodownload-Button (Pill mit roter Outline, prominent im Header rechts) ----- */
+.btn-fotodownload {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.7rem 1.6rem;
+  border: 2px solid var(--red);
+  border-radius: 999px;
+  color: var(--red);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  background: var(--white);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.btn-fotodownload:hover {
+  background: var(--red);
+  color: var(--white);
+  text-decoration: none;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+@media (max-width: 768px) {
+  .btn-fotodownload {
+    padding: 0.55rem 1.1rem;
+    font-size: 0.75rem;
+  }
+}
+
 /* ----- WhatsApp Floating Button (1:1 von fotobus.saarland — Dachmarken-Konsistenz) ----- */
 .whatsapp-float {
   position: fixed;
