@@ -23,14 +23,18 @@
 /photobooth-galerie-statistik-seite-2/      /  301
 
 
-# ----- Fotodownload + PBG-Endpoints → Hybrid-Subdomain -----
-# Entscheidung 2026-05-10: galerie.fotobox.saarland (WordPress + photobooth-gallery-Plugin)
+# ----- Fotodownload + PBG-Endpoints → Archiv-Subdomain (Übergangsphase) -----
+# Entscheidung 2026-05-10 (Jürgen Mayr bestätigt: Daten-Migration unpraktisch).
+# Strategie: alte WP wird archiv.fotobox.saarland (bestehende 29.235 Bilder + PINs bleiben dort),
+# neue Events bekommen Drucke mit galerie.fotobox.saarland.
+# Diese 301-Redirects gelten für alte Drucke (mit aufgedruckter fotobox.saarland-URL),
+# damit Kunden ihre alten Galerien noch finden — geplant für ca. 6 Monate Übergang.
 # Doku: ../03-Fotodownload-Strategie.md
 
-/fotodownload/    https://galerie.fotobox.saarland/                 301
-/pbg              https://galerie.fotobox.saarland/pbg              301
-/pbg-statistic    https://galerie.fotobox.saarland/pbg-statistic    301
-/pbg-statistik    https://galerie.fotobox.saarland/pbg-statistik    301
+/fotodownload/    https://archiv.fotobox.saarland/fotodownload/     301
+/pbg              https://archiv.fotobox.saarland/pbg               301
+/pbg-statistic    https://archiv.fotobox.saarland/pbg-statistic     301
+/pbg-statistik    https://archiv.fotobox.saarland/pbg-statistik     301
 
 
 # ----- Bestehende Top-URLs mit identischem Pfad -----
