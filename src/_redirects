@@ -23,15 +23,14 @@
 /photobooth-galerie-statistik-seite-2/      /  301
 
 
-# ----- Fotodownload + PBG-Endpoints -----
-# Werden nach Entscheidung der Fotodownload-Strategie (Task #2) gesetzt.
-# Bei Hybrid-Modell zeigen sie auf eine fotodownload.fotobox.saarland-Subdomain,
-# bei externer Lösung auf einen anderen Service, bei Re-Build hier ins Site.
-#
-# /fotodownload/                              [TBD]  301
-# /pbg                                        [TBD]  301
-# /pbg-statistic                              [TBD]  301
-# /pbg-statistik                              [TBD]  301
+# ----- Fotodownload + PBG-Endpoints → Hybrid-Subdomain -----
+# Entscheidung 2026-05-10: galerie.fotobox.saarland (WordPress + photobooth-gallery-Plugin)
+# Doku: ../03-Fotodownload-Strategie.md
+
+/fotodownload/    https://galerie.fotobox.saarland/                 301
+/pbg              https://galerie.fotobox.saarland/pbg              301
+/pbg-statistic    https://galerie.fotobox.saarland/pbg-statistic    301
+/pbg-statistik    https://galerie.fotobox.saarland/pbg-statistik    301
 
 
 # ----- Bestehende Top-URLs mit identischem Pfad -----
