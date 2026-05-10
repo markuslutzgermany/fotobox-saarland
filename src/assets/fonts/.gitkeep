@@ -1,0 +1,14 @@
+# Lato-Schriftdateien hier ablegen
+#
+# Erwartet werden 3 Dateien mit GENAU diesen Namen (Kleinbuchstaben, Bindestrich):
+#
+#   lato-regular.woff2  (oder .ttf)   — Schriftgewicht 400 / Standard
+#   lato-bold.woff2     (oder .ttf)   — Schriftgewicht 700 / Bold
+#   lato-black.woff2    (oder .ttf)   — Schriftgewicht 900 / Black (für Überschriften)
+#
+# Quelle: https://fonts.google.com/specimen/Lato
+# Im Google-Fonts-ZIP heißen die Dateien meist
+#   Lato-Regular.ttf, Lato-Bold.ttf, Lato-Black.ttf
+# → einfach in Kleinbuchstaben umbenennen wie oben gezeigt.
+#
+# Wenn keine Files hier liegen, greift der System-Schrift-Fallback (Lato → -apple-system → system-ui → Segoe UI → Roboto).

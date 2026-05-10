@@ -1,0 +1,323 @@
+/* ============================================================
+   fotobox.saarland — Hauptstylesheet
+   Brand-Tokens an fotobus.saarland angeglichen (Dachmarke)
+   ============================================================ */
+
+/* ----- Lokale Web-Fonts (DSGVO-konform — keine Google-Fonts-CDN) -----
+   Lato-TTFs liegen unter /assets/fonts/Lato/ (Google-Fonts-Standard-Ordnerstruktur).
+   Sind keine Dateien vorhanden, greift der System-Stack-Fallback in --font-body. */
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/Lato/Lato-regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/Lato/Lato-bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  src: url("/assets/fonts/Lato/Lato-black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Brand Colors */
+  --red: #E30613;
+  --red-dark: #B50410;
+  --dark: #3C3C3C;
+  --grey: #6B6B6B;
+  --grey-light: #B0B0B0;
+  --light: #F5F5F5;
+  --white: #FFFFFF;
+
+  /* Layout */
+  --max-width: 1200px;
+  --gutter: 1.5rem;
+  --radius: 6px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.15);
+
+  /* Typography */
+  --font-body: "Lato", -apple-system, "system-ui", "Segoe UI", Roboto, sans-serif;
+  --font-display: "Lato", -apple-system, "system-ui", sans-serif;
+
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+  --space-7: 4rem;
+  --space-8: 6rem;
+}
+
+/* ----- Reset / Base ----- */
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--dark);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, svg { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--red); text-decoration: none; }
+a:hover { color: var(--red-dark); text-decoration: underline; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-weight: 900;
+  line-height: 1.2;
+  margin: 0 0 var(--space-3);
+  color: var(--dark);
+}
+
+h1 { font-size: clamp(2rem, 4vw, 3.25rem); }
+h2 { font-size: clamp(1.5rem, 3vw, 2.25rem); }
+h3 { font-size: 1.375rem; }
+
+p { margin: 0 0 var(--space-3); }
+
+/* ----- Container ----- */
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+/* ----- Topbar ----- */
+
+.topbar {
+  background: var(--red);
+  color: var(--white);
+  font-size: 0.95rem;
+  padding: 0.5rem 0;
+  text-align: center;
+}
+.topbar a { color: var(--white); }
+.topbar a:hover { color: var(--white); opacity: 0.85; }
+
+/* ----- Header ----- */
+
+.site-header {
+  background: var(--white);
+  border-bottom: 1px solid var(--light);
+  padding: 0.75rem 0;
+}
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.logo {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: var(--red);
+}
+.logo:hover { text-decoration: none; }
+.logo__mark {
+  display: inline-block;
+  background: var(--red);
+  color: var(--white);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius);
+  font-weight: 900;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+}
+.logo__text {
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: 0.05em;
+  color: var(--dark);
+}
+.logo__domain {
+  font-size: 0.7rem;
+  color: var(--grey);
+  letter-spacing: 0.02em;
+}
+
+/* ----- Nav ----- */
+
+.site-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: var(--space-4);
+}
+.site-nav a {
+  color: var(--dark);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  border-bottom: 2px solid transparent;
+}
+.site-nav a:hover {
+  color: var(--red);
+  text-decoration: none;
+}
+.site-nav a[aria-current="page"] {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
+/* ----- Hero ----- */
+
+.hero {
+  position: relative;
+  background: var(--dark);
+  color: var(--white);
+  padding: var(--space-7) 0;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(0,0,0,0.6), rgba(0,0,0,0.3));
+  z-index: 1;
+}
+.hero__content { position: relative; z-index: 2; }
+.hero__badge {
+  display: inline-block;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+.hero h1 { color: var(--white); }
+.hero p { color: rgba(255,255,255,0.92); max-width: 60ch; }
+.hero__ctas { display: flex; gap: var(--space-3); flex-wrap: wrap; margin-top: var(--space-4); }
+
+/* ----- Buttons ----- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.1s;
+  border: none;
+  cursor: pointer;
+}
+.btn:hover { text-decoration: none; transform: translateY(-1px); }
+.btn--primary { background: var(--red); color: var(--white); }
+.btn--primary:hover { background: var(--red-dark); color: var(--white); }
+.btn--ghost { background: var(--white); color: var(--red); border: 2px solid var(--white); }
+.btn--ghost:hover { background: rgba(255,255,255,0.9); }
+
+/* ----- Sections ----- */
+
+.section { padding: var(--space-7) 0; }
+.section--alt { background: var(--light); }
+.section__lead { max-width: 65ch; margin: 0 auto var(--space-5); text-align: center; color: var(--grey); }
+
+/* ----- Card grid ----- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-4);
+}
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.card h3 { color: var(--dark); margin-top: 0; }
+
+/* ----- Footer ----- */
+
+.site-footer {
+  background: var(--dark);
+  color: var(--white);
+  padding: var(--space-7) 0 var(--space-4);
+  margin-top: var(--space-8);
+}
+.site-footer a { color: var(--white); }
+.site-footer a:hover { color: var(--red); text-decoration: underline; }
+.site-footer__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-5);
+}
+.site-footer__heading {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--white);
+  margin-bottom: var(--space-3);
+}
+.site-footer__links {
+  list-style: none;
+  margin: 0; padding: 0;
+}
+.site-footer__links li { margin-bottom: var(--space-1); }
+.site-footer__address { font-style: normal; line-height: 1.7; }
+.site-footer__bottom {
+  margin-top: var(--space-6);
+  padding-top: var(--space-3);
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.85rem;
+  color: var(--grey-light);
+  text-align: center;
+}
+
+/* ----- Skip link (a11y) ----- */
+.skip-link {
+  position: absolute; left: -9999px;
+}
+.skip-link:focus {
+  left: 1rem; top: 1rem;
+  background: var(--red); color: var(--white);
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+}
+
+/* ----- Responsive ----- */
+@media (max-width: 768px) {
+  .site-header__inner { flex-direction: column; gap: var(--space-3); }
+  .site-nav ul { flex-wrap: wrap; justify-content: center; gap: var(--space-3); }
+  .topbar { font-size: 0.85rem; }
+  .logo__domain { display: none; }
+}

@@ -1,0 +1,18 @@
+# Build output
+_site/
+.cache/
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# IDE / OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Env / Secrets (Formspree-Endpoint kann öffentlich sein, aber sicher ist sicher)
+.env
+.env.local

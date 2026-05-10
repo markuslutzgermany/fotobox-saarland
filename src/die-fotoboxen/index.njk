@@ -1,0 +1,53 @@
+---
+layout: layout-base.njk
+title: Unsere Fotoboxen — Klassik, Magic Mirror und Feuerwehrbus
+description: Drei Fotobox-Linien für Geschäftskunden im Saarland. Klassik-Säule und Magic Mirror als Indoor-Setups, plus der Feuerwehrbus-Eyecatcher als Outdoor-Variante über unsere Schwestermarke fotobus.saarland.
+permalink: /die-fotoboxen/
+---
+
+<section class="section">
+  <div class="container">
+
+    <h1>Unsere Fotoboxen</h1>
+    <p class="section__lead">
+      Zwei Indoor-Produktlinien plus die Outdoor-Variante auf unserer Schwestermarke fotobus.saarland.
+      Alle Indoor-Setups mit Profi-Equipment, Studio-Licht und DSGVO-konformer Foto-Galerie.
+    </p>
+
+    <div class="cards">
+      {% for box in site.boxes %}
+        <article class="card" style="padding:2rem">
+          <h2 style="margin-top:0">
+            {% if box.external %}
+              <a href="{{ box.url }}" rel="noopener">{{ box.name }} ↗</a>
+            {% else %}
+              <a href="{{ box.url }}">{{ box.name }}</a>
+            {% endif %}
+          </h2>
+          <p style="font-weight:700;color:var(--red)">{{ box.tagline }}</p>
+          <p>{{ box.summary }}</p>
+          {% if not box.external %}
+            <p><a href="{{ box.url }}">Mehr zu dieser Fotobox →</a></p>
+          {% else %}
+            <p><a href="{{ box.url }}" rel="noopener">Zur Schwesterseite ↗</a></p>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+
+    <h2 style="margin-top:3rem">Welche Fotobox passt zu Ihrem Event?</h2>
+    <p>
+      Eine Faustregel aus 14 Jahren Praxis:
+    </p>
+    <ul>
+      <li><strong>Klassik-Säule:</strong> Standard-Firmenfeiern, Mitarbeiter-Events, Tag der offenen Tür mit Indoor-Bereich, Messen.</li>
+      <li><strong>Magic Mirror:</strong> Hochwertige Kundenevents, Galas, Premium-Produkt-Launches — überall dort, wo der „Wow"-Faktor zählt. Optional mit Geldeinwurf und Barcodescanner für Spenden- oder Bezahlmodus.</li>
+      <li><strong>Feuerwehrbus auf <a href="{{ site.sister.url }}" rel="noopener">fotobus.saarland</a>:</strong> Outdoor, Tag der offenen Tür, Werksgelände, Sommerfest — sobald ein sichtbarer Eyecatcher vor der Firma gewünscht ist. Deutschlands erster Feuerwehr-Fotobus, seit 2015 im Einsatz.</li>
+    </ul>
+
+    <p style="margin-top:2rem">
+      Unsicher, welches Modell? <a class="btn btn--primary" href="/kontakt/">Kostenlose Beratung anfragen</a>
+    </p>
+
+  </div>
+</section>

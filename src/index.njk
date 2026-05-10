@@ -1,0 +1,126 @@
+---
+layout: layout-base.njk
+title: Fotobox-Vermietung im Saarland für Firmenkunden
+description: Professionelle Fotobox-Vermietung im Saarland für Firmenfeiern, Kundenevents, Messen, Tag der offenen Tür und Produkt-Launches. 14 Jahre Erfahrung, 2500+ Events, 10+ verschiedene Fotoboxen inkl. Magic Mirror. Outdoor-Eyecatcher über die Schwestermarke fotobus.saarland.
+permalink: /
+---
+
+<section class="hero">
+  <div class="container hero__content">
+    <div class="hero__badge">★ Saarlands größter Fotobox-Vermieter — seit {{ site.brand.founded }}</div>
+    <h1>Fotoboxen für Firmenevents im Saarland</h1>
+    <p>
+      Über {{ site.stats.fotoboxesCount }} Fotobox-Systeme — Klassik-Säule, Magic Mirror und unsere
+      Outdoor-Schwestermarke <a href="{{ site.sister.url }}" style="color:inherit;text-decoration:underline">{{ site.sister.name }}</a>.
+      {{ site.stats.eventsCount }} betreute Events, {{ site.stats.yearsExperience }} Jahre
+      Erfahrung, sofortiger Druck in Premium-Qualität (8–10 Sekunden pro Foto).
+      DSGVO-konformer Foto-Download mit individuellem PIN.
+    </p>
+    <div class="hero__ctas">
+      <a class="btn btn--primary" href="/kontakt/">Anfrage senden</a>
+      <a class="btn btn--ghost" href="tel:{{ site.brand.phoneTel }}">📞 {{ site.brand.phone }}</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Maßgeschneidert für Geschäftskunden</h2>
+    <p class="section__lead">
+      Diese Site richtet sich ausschließlich an Unternehmen, Gewerbetreibende, Verbände und
+      öffentliche Institutionen. Reine Privatanlässe (Hochzeiten, Geburtstage) bedienen wir
+      gezielt über die Schwesterseite
+      <a href="{{ site.sister.url }}">{{ site.sister.name }}</a> — dort ist das Feuerwehrauto USP.
+    </p>
+
+    <div class="cards">
+      {% for type in site.audienceTypes %}
+        <article class="card">
+          <h3><a href="{{ type.url }}">{{ type.label }}</a></h3>
+          <p>Konzepte und Ausstattung passend zu Ihrem {{ type.label | lower }} im Saarland.</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <h2>Unsere Fotoboxen</h2>
+    <p class="section__lead">Zwei Indoor-Linien plus die Outdoor-Variante über unsere Schwestermarke.</p>
+
+    <div class="cards">
+      {% for box in site.boxes %}
+        <article class="card">
+          <h3>
+            {% if box.external %}
+              <a href="{{ box.url }}" rel="noopener">{{ box.name }} ↗</a>
+            {% else %}
+              <a href="{{ box.url }}">{{ box.name }}</a>
+            {% endif %}
+          </h3>
+          <p style="font-weight:700;color:var(--red);font-size:0.9rem;margin-bottom:0.5rem">{{ box.tagline }}</p>
+          <p>{{ box.summary }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <h2>Warum Foto Lutz?</h2>
+    <p class="section__lead">Was uns von austauschbaren Fotobox-Anbietern unterscheidet.</p>
+
+    <div class="cards">
+      {% for usp in site.usps %}
+        <article class="card">
+          <h3 style="font-size:1.1rem">{{ usp.title }}</h3>
+          <p style="font-size:0.95rem">{{ usp.text }}</p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <h2>Drei Pakete für Ihren Eventbedarf</h2>
+    <p class="section__lead">
+      Vom schlanken Starter bis zum Fullservice mit Druck-Flatrate. Detaillierte Auflistung auf der
+      <a href="/preise/">Preise-Seite</a>.
+    </p>
+
+    <div class="cards">
+      {% for pkg in site.packages %}
+        <article class="card" {% if pkg.highlight %}style="border:2px solid var(--red)"{% endif %}>
+          {% if pkg.highlight %}<p style="color:var(--red);font-weight:900;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem">★ {{ pkg.tagline }}</p>{% else %}<p style="color:var(--grey);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem">{{ pkg.tagline }}</p>{% endif %}
+          <h3>{{ pkg.name }}</h3>
+          <p style="font-size:1.5rem;font-weight:900;color:var(--dark);margin:0.5rem 0">{{ pkg.price }} €<small style="font-size:0.7rem;color:var(--grey);font-weight:400">&nbsp;{{ pkg.vatNote }}</small></p>
+          <p style="font-size:0.9rem;color:var(--grey)">{{ pkg.features[0] }}</p>
+          <p style="margin-top:1rem"><a href="/preise/#{{ pkg.tagline | slug }}">Details →</a></p>
+        </article>
+      {% endfor %}
+    </div>
+
+    <p style="margin-top:2rem;text-align:center">
+      <a class="btn btn--primary" href="/preise/">Alle Pakete im Detail</a>
+    </p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="text-align:center;max-width:780px">
+    <h2>Saarbrücken · Saarlouis · Homburg · Neunkirchen · Völklingen · Zweibrücken</h2>
+    <p>
+      Wir liefern und betreuen im gesamten Saarland sowie überregional. Auf- und Abbau übernimmt
+      ein Fotograf — Sie konzentrieren sich auf Ihr Event.
+    </p>
+    <p>
+      <a class="btn btn--primary" href="/kontakt/">Jetzt anfragen</a>
+    </p>
+    <p style="margin-top:1rem;color:var(--grey);font-size:0.9rem">
+      📞 Gratis-Hotline {{ site.brand.phone }} · {{ site.brand.phoneLabel }} · Mo–Fr 9–18 Uhr
+    </p>
+  </div>
+</section>

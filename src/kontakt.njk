@@ -1,0 +1,114 @@
+---
+layout: layout-base.njk
+title: Kontakt & Anfrage
+description: Schnelle Anfrage für Ihre Fotobox-Vermietung im Saarland — Gratis-Hotline 0800 80 44 200, Antwort meist innerhalb weniger Stunden.
+permalink: /kontakt/
+---
+
+<section class="section">
+  <div class="container" style="max-width:780px">
+
+    <h1>Anfrage stellen</h1>
+    <p class="section__lead">
+      Wir antworten meistens noch am gleichen Tag — telefonisch oder per E-Mail.
+      Pflichtfelder sind mit * markiert.
+    </p>
+
+    {# Formspree-Endpoint: Form "Fotobox Saarland — Anfrage"
+       Empfänger fotolutzfotoaktion@gmail.com (Gmail-Auto-Forward → office@fotolutz.com im Outlook).
+       Diese indirekte Route umgeht Microsoft 365 Spam-Filter, die Formspree direkt blockieren. #}
+    <form action="https://formspree.io/f/xeenpddb"
+          method="POST"
+          class="anfrage-form">
+
+      <div class="form-row">
+        <label for="company">Firma *</label>
+        <input id="company" name="company" type="text" required autocomplete="organization">
+      </div>
+
+      <div class="form-row">
+        <label for="name">Ansprechpartner:in *</label>
+        <input id="name" name="name" type="text" required autocomplete="name">
+      </div>
+
+      <div class="form-row">
+        <label for="email">E-Mail *</label>
+        <input id="email" name="email" type="email" required autocomplete="email">
+      </div>
+
+      <div class="form-row">
+        <label for="phone">Telefon</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel">
+      </div>
+
+      <div class="form-row">
+        <label for="event_type">Art des Events *</label>
+        <select id="event_type" name="event_type" required>
+          <option value="">— bitte wählen —</option>
+          {% for t in site.audienceTypes %}
+            <option value="{{ t.label }}">{{ t.label }}</option>
+          {% endfor %}
+          <option value="Sonstiges">Sonstiges (geschäftlich)</option>
+        </select>
+      </div>
+
+      <div class="form-row">
+        <label for="event_date">Wunschdatum</label>
+        <input id="event_date" name="event_date" type="date">
+      </div>
+
+      <div class="form-row">
+        <label for="guests">Gästezahl (geschätzt)</label>
+        <input id="guests" name="guests" type="number" min="1" inputmode="numeric">
+      </div>
+
+      <div class="form-row">
+        <label for="message">Ihre Nachricht</label>
+        <textarea id="message" name="message" rows="5"></textarea>
+      </div>
+
+      {# Honeypot — versteckt, sollte leer bleiben #}
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+             style="position:absolute;left:-9999px;opacity:0;height:0;width:0">
+
+      <div class="form-row">
+        <button type="submit" class="btn btn--primary">Anfrage senden</button>
+      </div>
+
+      <p style="font-size:0.85rem;color:var(--grey)">
+        Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß
+        <a href="/datenschutz/">Datenschutzerklärung</a> zu.
+      </p>
+
+    </form>
+
+    <hr style="margin:3rem 0;border:none;border-top:1px solid var(--light)">
+
+    <h2>Direkt erreichen</h2>
+    <p>
+      Telefon: <a href="tel:{{ site.brand.phoneTel }}">{{ site.brand.phone }}</a>
+      ({{ site.brand.phoneLabel }})<br>
+      E-Mail: <a href="mailto:{{ site.brand.email }}">{{ site.brand.email }}</a>
+    </p>
+
+  </div>
+</section>
+
+<style>
+  .anfrage-form { display: grid; gap: 1rem; }
+  .form-row label { display: block; font-weight: 700; margin-bottom: 0.25rem; color: var(--dark); }
+  .form-row input, .form-row select, .form-row textarea {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    border: 1px solid #d1d1d1;
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 1rem;
+    background: var(--white);
+  }
+  .form-row input:focus, .form-row select:focus, .form-row textarea:focus {
+    outline: 2px solid var(--red);
+    outline-offset: 1px;
+    border-color: var(--red);
+  }
+</style>

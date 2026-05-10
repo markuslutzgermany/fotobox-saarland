@@ -1,0 +1,76 @@
+<footer class="site-footer">
+  <div class="container site-footer__grid">
+
+    <div class="site-footer__col">
+      <h2 class="site-footer__heading">{{ site.brand.name }}</h2>
+      <address class="site-footer__address">
+        {{ site.brand.company }}<br>
+        {{ site.brand.address.street }}<br>
+        {{ site.brand.address.postalCode }} {{ site.brand.address.city }}<br>
+        <br>
+        Tel: <a href="tel:{{ site.brand.phoneTel }}">{{ site.brand.phone }}</a> ({{ site.brand.phoneLabel }})<br>
+        E-Mail: <a href="mailto:{{ site.brand.email }}">{{ site.brand.email }}</a>
+      </address>
+    </div>
+
+    <div class="site-footer__col">
+      <h2 class="site-footer__heading">Service</h2>
+      <ul class="site-footer__links">
+        <li><a href="/die-fotoboxen/">Die Fotoboxen</a></li>
+        <li><a href="/anlaesse/">Anlässe</a></li>
+        <li><a href="/preise/">Preise</a></li>
+        <li><a href="/faq/">FAQ</a></li>
+        <li><a href="/kontakt/">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div class="site-footer__col">
+      <h2 class="site-footer__heading">Schwesterseite</h2>
+      <p>Für Eye-Catcher-Outdoor-Events und Premium-Hochzeiten:</p>
+      <p><a href="{{ site.sister.url }}" rel="noopener">{{ site.sister.name }} →</a></p>
+    </div>
+
+    <div class="site-footer__col">
+      <h2 class="site-footer__heading">Rechtliches</h2>
+      <ul class="site-footer__links">
+        <li><a href="/impressum/">Impressum</a></li>
+        <li><a href="/datenschutz/">Datenschutz</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="site-footer__bottom container">
+    © {% year %} {{ site.brand.company }} · {{ site.title }}
+  </div>
+</footer>
+
+{# Schema.org LocalBusiness — global #}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "{{ site.url }}/#localbusiness",
+  "name": "{{ site.brand.name }}",
+  "legalName": "{{ site.brand.company }}",
+  "url": "{{ site.url }}",
+  "telephone": "{{ site.brand.phoneTel }}",
+  "email": "{{ site.brand.email }}",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "{{ site.brand.address.street }}",
+    "postalCode": "{{ site.brand.address.postalCode }}",
+    "addressLocality": "{{ site.brand.address.city }}",
+    "addressCountry": "{{ site.brand.address.country }}"
+  },
+  "areaServed": [
+    {%- for r in site.regions %}
+      { "@type": "City", "name": "{{ r }}" }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ],
+  "foundingDate": "{{ site.brand.founded }}",
+  "sameAs": [
+    "{{ site.sister.url }}"
+  ]
+}
+</script>

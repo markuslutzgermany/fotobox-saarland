@@ -1,0 +1,77 @@
+---
+layout: layout-base.njk
+title: Preise & Pakete
+description: Drei B2B-Fotobox-Pakete von 599€ bis 1099€ — Basic, Bestseller und Premium. Alle mit professioneller 22"-Säulen-Fotobox, Spiegelreflex, Profi-Druck und DSGVO-konformer Galerie.
+permalink: /preise/
+---
+
+<section class="section">
+  <div class="container" style="max-width:1000px">
+
+    <h1>Preise &amp; Pakete für Geschäftskunden</h1>
+    <p class="section__lead">
+      Drei klar abgestufte Pakete — alle mit unserer Profi-Fotobox, Spiegelreflex-Kamera, Studio-Licht
+      und DSGVO-konformer Foto-Galerie. Brauchen Sie etwas anderes?
+      <a href="/kontakt/">Sagen Sie uns Bescheid</a> — fast jede Anpassung ist möglich.
+    </p>
+
+    {% for pkg in site.packages %}
+      <article class="card" id="{{ pkg.tagline | slug }}"
+               style="margin-bottom:2rem; padding:2rem; {% if pkg.highlight %}border:2px solid var(--red); box-shadow:var(--shadow-lg){% endif %}">
+
+        <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:1rem;margin-bottom:1rem">
+          <div>
+            {% if pkg.highlight %}<p style="color:var(--red);font-weight:900;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin:0">★ {{ pkg.tagline }}</p>{% else %}<p style="color:var(--grey);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin:0">{{ pkg.tagline }}</p>{% endif %}
+            <h2 style="margin:0.25rem 0 0">{{ pkg.name }}</h2>
+          </div>
+          <div style="text-align:right">
+            <p style="font-size:2.5rem;font-weight:900;color:var(--dark);margin:0;line-height:1">
+              {{ pkg.price }} €
+            </p>
+            <p style="font-size:0.85rem;color:var(--grey);margin:0">{{ pkg.vatNote }}</p>
+          </div>
+        </div>
+
+        <ul style="list-style:none;padding:0;margin:0">
+          {% for f in pkg.features %}
+            <li style="padding:0.5rem 0;border-bottom:1px solid var(--light)">
+              <span style="color:var(--red);font-weight:900;margin-right:0.5rem">✓</span>{{ f }}
+            </li>
+          {% endfor %}
+        </ul>
+
+        <p style="margin-top:1.5rem">
+          <a class="btn {% if pkg.highlight %}btn--primary{% else %}btn--ghost{% endif %}"
+             href="/kontakt/?paket={{ pkg.name | slug }}"
+             style="{% if not pkg.highlight %}background:var(--dark);color:var(--white);border:0{% endif %}">
+            {{ pkg.name }} anfragen
+          </a>
+        </p>
+
+      </article>
+    {% endfor %}
+
+    <p style="font-size:0.85rem;color:var(--grey);margin-top:3rem;padding:1rem;background:var(--light);border-radius:var(--radius)">
+      <strong>Wichtig:</strong> {{ site.packageDisclaimer }}
+    </p>
+
+    <h2 style="margin-top:3rem">Was ist nicht im Preis enthalten?</h2>
+    <ul>
+      <li>An- und Abfahrtszeiten / Kilometer-Pauschale (je nach Eventdistanz zu Saarbrücken)</li>
+      <li>Backgroundsystem-Zubuchung (BUSINESS — Basic), wenn keine Eventlocation als Hintergrund dient: 29 €</li>
+      <li>Druckflatrate (nur bei BUSINESS — Premium enthalten; bei Basic / Bestseller auf 400 Drucke begrenzt)</li>
+    </ul>
+
+    <h2>Sondersetups &amp; Custom-Anfragen</h2>
+    <p>
+      Magic Mirror mit Bezahl- oder Spendenmodus, Messeauftritt mit Branding, Greenscreen-KI,
+      Mehr-Tage-Buchungen, Backup-System on standby — alles auf Anfrage. Für individuelle
+      Eventkonzepte schneller ein Anruf:
+    </p>
+    <p>
+      <a class="btn btn--primary" href="tel:{{ site.brand.phoneTel }}">📞 {{ site.brand.phone }}</a>
+      <span style="color:var(--grey);margin-left:0.5rem">{{ site.brand.phoneLabel }}, Mo–Fr 9–18 Uhr</span>
+    </p>
+
+  </div>
+</section>

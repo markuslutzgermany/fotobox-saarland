@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if title %}{{ title }} — {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
+  <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}">
+
+  {# Canonical #}
+  <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+  {# Open Graph + Twitter (sister-brand-konsistent zu fotobus) #}
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{{ title or site.title }}">
+  <meta property="og:description" content="{{ description or site.description }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta name="twitter:card" content="summary_large_image">
+
+  {# Favicon — Platzhalter, später ersetzen #}
+  <link rel="icon" href="/favicon.ico">
+
+  {# Fonts: Lato lokal (DSGVO-konform — keine externen Calls)
+     CSS lädt Lato per @font-face aus /assets/fonts/, mit System-Stack als Fallback.
+     Echte Lato-WOFF2-Dateien müssen unter src/assets/fonts/ abgelegt werden (TODO Markus).
+  #}
+
+  {# Eigenes CSS #}
+  <link rel="stylesheet" href="/css/main.css">
+
+  {# Schema.org LocalBusiness — global im Footer-Include nochmal als JSON-LD #}
+</head>
+<body>
+
+  {% include "header.njk" %}
+
+  <main id="main">
+    {{ content | safe }}
+  </main>
+
+  {% include "footer.njk" %}
+
+</body>
+</html>

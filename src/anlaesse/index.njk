@@ -1,0 +1,37 @@
+---
+layout: layout-base.njk
+title: Anlässe für Ihre Fotobox-Buchung
+description: Fotobox-Lösungen für Firmenfeiern, Kundenevents, Messen, Tag der offenen Tür und Produkt-Launches im Saarland — von der Mitarbeiter-Weihnachtsfeier bis zur Premium-Gala.
+permalink: /anlaesse/
+---
+
+<section class="section">
+  <div class="container">
+
+    <h1>Anlässe für Ihre Fotobox-Buchung</h1>
+    <p class="section__lead">
+      Diese fünf Eventarten machen den Großteil unserer B2B-Buchungen aus. Für jede haben wir aus
+      14 Jahren Praxis einen passenden Setup-Vorschlag.
+    </p>
+
+    <div class="cards">
+      {% for type in site.audienceTypes %}
+        <article class="card" style="padding:2rem">
+          <h2 style="margin-top:0"><a href="{{ type.url }}">{{ type.label }}</a></h2>
+          <p>Mehr erfahren zu typischen Setups, empfohlenen Paketen und Beispielen aus unserer Praxis.</p>
+          <p><a href="{{ type.url }}">Zum Anlass →</a></p>
+        </article>
+      {% endfor %}
+    </div>
+
+    <h2 style="margin-top:3rem">Was nicht zu uns gehört</h2>
+    <p>
+      <strong>Reine Privatanlässe</strong> (Geburtstage, Hochzeiten, Familienfeiern) sind auf
+      fotobox.saarland nicht mehr buchbar. Hochzeiten und Outdoor-Eyecatcher mit besonderem
+      Charakter haben wir auf der Schwesterseite gebündelt:
+      <a href="{{ site.sister.url }}">{{ site.sister.name }}</a>. Dort ist das Feuerwehrauto USP,
+      hier auf fotobox.saarland sind es die klassischen Indoor-Profi-Setups für Firmen.
+    </p>
+
+  </div>
+</section>

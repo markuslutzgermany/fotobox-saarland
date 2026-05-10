@@ -1,0 +1,40 @@
+# ============================================================
+# Cloudflare Pages — _redirects für fotobox.saarland-Migration
+# Stand: 2026-05-10 (Pre-Launch — vor DNS-Cutover noch verifizieren)
+# Doku: ../02-URL-Inventar.md
+# ============================================================
+
+# 1) www → apex (falls jemand www. nutzt)
+https://www.fotobox.saarland/*  https://fotobox.saarland/:splat  301!
+
+# 2) Photobooth-Gallery-Test-/Demo-Seiten von 2019 → 410 (nicht im Google-Index)
+/the-photobooth-gallery-share-microsite/    /  410
+/the-photobooth-gallery-test-page/          /  410
+/photobooth-galerie-statistik-seite/        /  410
+/the-photobooth-gallery-statistics-page/    /  410
+/photobooth-galerie-statistik-seite-2/      /  410
+
+# 3) PBG-Plugin-Endpoints (warten auf Fotodownload-Strategie-Entscheidung, Task #2)
+# Bei Hybrid-Modell:
+#   /pbg            https://fotodownload.fotobox.saarland/pbg            301
+#   /pbg-statistic  https://fotodownload.fotobox.saarland/pbg-statistic  301
+#   /pbg-statistik  https://fotodownload.fotobox.saarland/pbg-statistik  301
+# Bei Re-Build / externer Lösung: Mapping anpassen.
+
+# 4) /fotodownload/ (kritisch! — DSGVO-zertifiziertes Plugin-Setup)
+# Bei Hybrid-Modell:
+#   /fotodownload/  https://fotodownload.fotobox.saarland/  301
+# Bei Re-Build: Inhalt direkt in der Site oder externer Service.
+
+# 5) Bestehende Seiten mit identischer URL — kein Redirect nötig (Eleventy gibt sie direkt aus):
+#   /                           ✅ identisch
+#   /impressum/                 ✅ identisch
+#   /datenschutz/               ✅ identisch
+#   /fotobox-buchen-geschaeftskunde/  ✅ identisch (Inhalt wechselt: Konfigurator → Anfrageformular)
+
+# 6) Neue Long-Tail-Unterseiten — keine Redirects nötig (sind Neuanlagen)
+#   /die-fotoboxen/, /anlaesse/, /preise/, /faq/, /kontakt/, /saarbruecken/ etc.
+
+# 7) Sekundäre Markendomains (geparkt) → später Apex-Redirects als 301 setzen
+#   fotobox-mieten-saarland.de  →  /     (auf Cloudflare-Domain-Ebene, nicht hier)
+#   der-magische-fotospiegel.de →  /die-fotoboxen/magic-mirror/

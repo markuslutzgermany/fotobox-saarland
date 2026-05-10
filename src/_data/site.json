@@ -1,0 +1,166 @@
+{
+  "url": "https://fotobox.saarland",
+  "title": "fotobox.saarland",
+  "tagline": "Profi-Fotobox-Vermietung im Saarland — für Firmenkunden",
+  "description": "Hochwertige Fotobox-Vermietung im Saarland für Firmenfeiern, Kundenevents, Messen, Tag der offenen Tür und Produkt-Launches. 14 Jahre Erfahrung, 2500+ Events, 10+ verschiedene Fotoboxen inkl. Magic Mirror. Outdoor-Eyecatcher über die Schwestermarke fotobus.saarland.",
+  "brand": {
+    "name": "Foto Lutz",
+    "company": "Fotolutz Complex GmbH",
+    "address": {
+      "street": "Metzer Strasse 158",
+      "postalCode": "66117",
+      "city": "Saarbrücken",
+      "country": "DE",
+      "neighbour": "Direkt neben dem ZF-Gebäude"
+    },
+    "phone": "0800 80 44 200",
+    "phoneTel": "+498008044200",
+    "phoneLabel": "Free Call",
+    "phoneOffice": "0681 / 3720122",
+    "email": "office@fotolutz.com",
+    "founded": 2012
+  },
+  "sister": {
+    "name": "Feuerwehr-Fotobus Saarland",
+    "url": "https://fotobus.saarland",
+    "usp": "Eye-Catcher-Outdoor-Events und Premium-Hochzeiten",
+    "since": 2015
+  },
+  "stats": {
+    "yearsExperience": 14,
+    "eventsCount": "2500+",
+    "fotoboxesCount": "10+",
+    "fulfillmentRate": "99%"
+  },
+  "regions": [
+    "Saarbrücken",
+    "Saarlouis",
+    "Homburg",
+    "Neunkirchen",
+    "Völklingen",
+    "Zweibrücken"
+  ],
+  "nav": [
+    { "label": "Start", "url": "/" },
+    { "label": "Die Fotoboxen", "url": "/die-fotoboxen/" },
+    { "label": "Fotoprintmodul", "url": "/fotoprintmodul/" },
+    { "label": "Anlässe", "url": "/anlaesse/" },
+    { "label": "Preise", "url": "/preise/" },
+    { "label": "FAQ", "url": "/faq/" },
+    { "label": "Kontakt", "url": "/kontakt/" }
+  ],
+  "audience": "B2B",
+  "audienceTypes": [
+    { "label": "Firmenfeier", "url": "/anlaesse/firmenfeier/" },
+    { "label": "Kundenevent", "url": "/anlaesse/kundenevent/" },
+    { "label": "Messe", "url": "/anlaesse/messe/" },
+    { "label": "Tag der offenen Tür", "url": "/anlaesse/tag-der-offenen-tuer/" },
+    { "label": "Produkt-Launch", "url": "/anlaesse/produkt-launch/" }
+  ],
+  "usps": [
+    { "title": "Größter Anbieter im Saarland", "text": "Über 10 verschiedene Fotobox-Systeme — flexibel auf jedes Event abgestimmt." },
+    { "title": "14 Jahre Praxis", "text": "Seit 2012 ausschließlich Fotobox-Geschäft — kein Nebenerwerb, sondern unser tägliches Brot." },
+    { "title": "2500+ Events", "text": "National und international betreut — 99% der Kundenwünsche umsetzbar." },
+    { "title": "Profi-Equipment", "text": "Spiegelreflex-Kameras, Studio-Blitzanlagen, High-End-Thermodrucker (Druckzeit 8–10 Sekunden)." },
+    { "title": "DSGVO-konformer Foto-Download", "text": "Zugang nur per individuellem PIN auf dem Druck — keine offenen Galerien, keine Datenlecks." },
+    { "title": "Foto-Statistiken in Echtzeit", "text": "Admin-Link für Auftraggeber — alle Eventdaten live während der Veranstaltung einsehbar." },
+    { "title": "Branding nach Ihrem CI", "text": "Inhouse-Großformatdruck und Schneidplotter — Fotobox-Branding auch kurzfristig umsetzbar." },
+    { "title": "Individuelles Drucklayout", "text": "Vorlagen oder Ihre Layoutwünsche — Bildausgaben passend zur Eventmarke." },
+    { "title": "Touchscreen mit Ihrem CI", "text": "Menüführung der Bildschirmanzeige in Ihrer Corporate Identity." },
+    { "title": "Greenscreen-KI seit 2019", "text": "Pioneer-Erfahrung mit KI-Hintergrundsystemen — kein klobiges Greenscreen-Gestell, sondern moderne Software-Lösung." },
+    { "title": "Studio-Beleuchtung", "text": "Professionelle Fotograf-Studiolicht-Sets — keine zusätzlichen Lichtquellen vor Ort nötig." },
+    { "title": "Schnellaufbau für Messen", "text": "Kompakte, stylische Fotoboxen in unter 10 Minuten betriebsbereit." },
+    { "title": "24/7-Telefon-Support", "text": "Bei Buchung erhalten Sie unsere Hotline-Nummer für Notfälle rund um die Uhr." },
+    { "title": "Backup-Systeme", "text": "Komplett eingerichtete Fotobox-Backups auf Anfrage standby — Ausfallrisiko praktisch null." },
+    { "title": "Druckbare Message-Schilder", "text": "28×16cm-Schilder mit Ihren Slogans — Inhouse-Bearbeitung auch kurzfristig." },
+    { "title": "Requisitenkoffer", "text": "Verkleidungsutensilien für witzige Bilder gehören dazu." },
+    { "title": "Bezahl- & Spendenmodus", "text": "Magic Mirror mit eingebautem Geldeinwurf und Barcodescanner — perfekt für Spenden-Aktionen oder Eintritts-Scans." },
+    { "title": "Maßgeschneidert, kein All-in-One", "text": "Wir konzipieren das Setup zu Ihrem Event — keine Stangenware." }
+  ],
+  "packages": [
+    {
+      "name": "BUSINESS — BASIC",
+      "tagline": "Starter",
+      "price": 599,
+      "currency": "EUR",
+      "vatNote": "+ 19 % MwSt.",
+      "features": [
+        "Hochwertige Fotobox mit 22\" Display, Live View, Touch-Screen, Spiegelreflexkamera",
+        "400 Fotoausdrucke 10×15cm mit High-Performance-Drucker (8–10 s pro Druck)",
+        "Fotohintergrund Ihre Location, oder unsere Backgroundsysteme (+29€)",
+        "Individuelle Layoutanpassung nach Ihrem CI",
+        "Professionelles Studio-Blitzsystem",
+        "Requisitenkoffer mit Verkleidungsutensilien",
+        "Alle Fotos zum Download in passwortgeschützter, DSGVO-konformer Event-Galerie",
+        "Nutzungsdauer: ein Eventtag/Abend",
+        "Auf- und Abbauzeiten des Systems",
+        "An-/Abfahrtszeiten und Km zuzüglich, je nach Distanz"
+      ],
+      "highlight": false
+    },
+    {
+      "name": "BUSINESS — BESTSELLER",
+      "tagline": "unser meistgebuchtes Paket",
+      "price": 829,
+      "currency": "EUR",
+      "vatNote": "+ 19 % MwSt.",
+      "features": [
+        "Hochwertige Fotobox mit 22\" Display, Live View, Touch-Screen, Spiegelreflexkamera",
+        "400 Fotoausdrucke 10×15cm mit High-Performance-Drucker (8–10 s pro Druck)",
+        "5 Std. Mitarbeiter-Betreuung während des Events",
+        "Professionelles Blitzsystem für perfekte Ausleuchtung",
+        "Individuelle Layoutanpassung nach Ihrem CI",
+        "Requisitenkoffer mit Verkleidungsutensilien",
+        "Alle Fotos zum Download in passwortgeschützter, DSGVO-konformer Event-Galerie",
+        "Auf- und Abbauzeiten des Systems",
+        "An-/Abfahrtszeiten und Km zuzüglich"
+      ],
+      "highlight": true
+    },
+    {
+      "name": "BUSINESS — PREMIUM",
+      "tagline": "Fullservice",
+      "price": 1099,
+      "currency": "EUR",
+      "vatNote": "+ 19 % MwSt.",
+      "features": [
+        "Hochwertige Fotobox mit 22\" Display, Live View, Touch-Screen, Spiegelreflexkamera",
+        "Druck-Flatrate 10×15cm mit High-Performance-Drucker (8–10 s pro Druck)",
+        "Auf- & Abbau plus 8 Std. Mitarbeiter-Betreuung",
+        "Frei wählbare Fotohintergründe via KI-Background-System",
+        "Professionelles Blitzsystem für perfekte Ausleuchtung",
+        "Individuelle Layoutanpassung nach Ihrem CI",
+        "Fotobox-Startbildschirm mit Ihrem CI",
+        "Requisitenkoffer mit Verkleidungsutensilien",
+        "Alle Fotos zum Download in passwortgeschützter, DSGVO-konformer Event-Galerie",
+        "An-/Abfahrtszeiten und Km zuzüglich"
+      ],
+      "highlight": false
+    }
+  ],
+  "packageDisclaimer": "Unsere gewerblichen Fotoboxen und Angebote richten sich ausschließlich an Unternehmen, Gewerbetreibende, Verbände sowie öffentliche Institutionen und gelten nicht für private Kunden.",
+  "boxes": [
+    {
+      "slug": "klassik",
+      "name": "Klassische Fotobox",
+      "tagline": "22\" Display, Live View, Profi-Druck",
+      "url": "/die-fotoboxen/klassik/",
+      "summary": "Die bewährte Säulen-Fotobox — professionelles Spiegelreflex-Setup, Studio-Blitz, sofortiger Druck in 10×15cm. Bis zu 400 Ausdrucke pro Event."
+    },
+    {
+      "slug": "magic-mirror",
+      "name": "Magic Mirror",
+      "tagline": "Der magische Spiegel mit Touchscreen",
+      "url": "/die-fotoboxen/magic-mirror/",
+      "summary": "Eleganter Bildschirm-Spiegel (1,90 × 80 cm) mit interaktiver Animation — Eye-Catcher für hochwertige Firmenevents. Optional mit Geldeinwurf und Barcodescanner für Spenden- oder Bezahlmodus."
+    },
+    {
+      "slug": "feuerwehrbus",
+      "name": "Feuerwehrbus auf fotobus.saarland",
+      "tagline": "Unsere Outdoor-Schwestermarke",
+      "url": "https://fotobus.saarland/",
+      "external": true,
+      "summary": "Outdoor-Setup auf Ihrem Werksgelände, Tag der offenen Tür oder Sommerfest? Deutschlands erster Feuerwehr-Fotobus läuft seit 2015 als unsere Schwestermarke fotobus.saarland — voll ausgestattete Profi-Fotobox eingebaut, plus echter Eyecatcher vor der Firmentür."
+    }
+  ]
+}
