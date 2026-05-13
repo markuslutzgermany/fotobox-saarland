@@ -102,7 +102,7 @@
     { "title": "Individuelles Drucklayout", "text": "Vorlagen oder Ihre Layoutwünsche — Bildausgaben passend zur Eventmarke." },
     { "title": "Touchscreen mit Ihrem CI", "text": "Menüführung der Bildschirmanzeige in Ihrer Corporate Identity." },
     { "title": "Greenscreen-KI seit 2019", "text": "Pioneer-Erfahrung mit KI-Hintergrundsystemen — kein klobiges Greenscreen-Gestell, sondern moderne Software-Lösung." },
-    { "title": "KI-Charaktergenerierung (NEU)", "text": "Aus jedem Gast einen kompletten Charakter — Astronaut, Pirat, Anime, Cyberpunk. DSGVO-konforme Verarbeitung auf einem sicheren Server in Deutschland." },
+    { "title": "KI-Charaktergenerierung (NEU)", "text": "Aus jedem Gast einen kompletten Charakter — Astronaut, Pirat, Anime, Cyberpunk. Auf Server in Deutschland." },
     { "title": "Studio-Beleuchtung", "text": "Professionelle Fotograf-Studiolicht-Sets — keine zusätzlichen Lichtquellen vor Ort nötig." },
     { "title": "Schnellaufbau für Messen", "text": "Kompakte, stylische Fotoboxen in unter 10 Minuten betriebsbereit." },
     { "title": "24/7-Telefon-Support", "text": "Bei Buchung erhalten Sie unsere Hotline-Nummer für Notfälle rund um die Uhr." },
@@ -193,7 +193,7 @@
       "name": "KI-Fotobox",
       "tagline": "Komplette Charaktere per KI — aus jedem Gast",
       "url": "/die-fotoboxen/ki-box/",
-      "summary": "Aus einem normalen Gastbild macht die KI in Sekunden komplett neue Charaktere — Astronaut, Pirat, Anime-Figur, Renaissance-Portrait, Cyberpunk, Fantasy-Wesen. Keine Requisiten nötig, kein Greenscreen. DSGVO-konforme Verarbeitung auf einem sicheren Server in Deutschland."
+      "summary": "Aus einem normalen Gastbild macht die KI in Sekunden komplett neue Charaktere — Astronaut, Pirat, Anime-Figur, Renaissance-Portrait, Cyberpunk, Fantasy-Wesen. Keine Requisiten nötig, kein Greenscreen. Auf Server in Deutschland."
     },
     {
       "slug": "feuerwehrbus",
