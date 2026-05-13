@@ -76,7 +76,7 @@
   },
   "nav": [
     { "label": "Start", "url": "/" },
-    { "label": "Die Fotoboxen", "url": "/die-fotoboxen/" },
+    { "label": "Fotoboxen", "url": "/die-fotoboxen/" },
     { "label": "Fotoprintmodul", "url": "/fotoprintmodul/" },
     { "label": "Anlässe", "url": "/anlaesse/" },
     { "label": "Preise", "url": "/preise/" },
