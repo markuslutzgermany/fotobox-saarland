@@ -66,8 +66,14 @@
     "addressCountry": "{{ site.brand.address.country }}"
   },
   "areaServed": [
-    {%- for r in site.regions %}
-      { "@type": "City", "name": "{{ r }}" }{% if not loop.last %},{% endif %}
+    {%- for c in site.regionsServed.countries %}
+      { "@type": "Country", "name": "{{ c.name }}", "identifier": "{{ c.code }}" },
+    {%- endfor %}
+    {%- for state in site.regionsServed.states %}
+      { "@type": "AdministrativeArea", "name": "{{ state }}" },
+    {%- endfor %}
+    {%- for city in site.regionsServed.majorCities %}
+      { "@type": "City", "name": "{{ city }}" }{% if not loop.last %},{% endif %}
     {%- endfor %}
   ],
   "foundingDate": "{{ site.brand.founded }}",

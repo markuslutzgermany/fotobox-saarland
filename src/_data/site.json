@@ -1,8 +1,8 @@
 {
   "url": "https://fotobox.saarland",
   "title": "fotobox.saarland",
-  "tagline": "Profi-Fotobox-Vermietung im Saarland — für Firmenkunden",
-  "description": "Hochwertige Fotobox-Vermietung im Saarland für Firmenfeiern, Kundenevents, Messen, Tag der offenen Tür und Produkt-Launches. 14 Jahre Erfahrung, 2500+ Events, 10+ verschiedene Fotoboxen inkl. Magic Mirror. Outdoor-Eyecatcher über die Schwestermarke fotobus.saarland.",
+  "tagline": "Profi-Fotobox-Vermietung in D · LUX · CH — aus dem Saarland, deutschlandweit + grenznah verfügbar",
+  "description": "Hochwertige Fotobox-Vermietung in Deutschland, Luxemburg und der Schweiz für Firmenfeiern, Kundenevents, Messen, Tag der offenen Tür und Produkt-Launches. Stammsitz Saarbrücken — 14 Jahre Erfahrung, 2500+ Events, 10+ verschiedene Fotoboxen inkl. Magic Mirror. Outdoor-Eyecatcher über die Schwestermarke fotobus.saarland.",
   "brand": {
     "name": "Foto Lutz",
     "company": "Fotolutz Complex GmbH",
@@ -41,6 +41,39 @@
     "Völklingen",
     "Zweibrücken"
   ],
+  "regionsServed": {
+    "primary": "Saarland (Stammregion)",
+    "countries": [
+      { "name": "Deutschland", "code": "DE" },
+      { "name": "Luxemburg", "code": "LU" },
+      { "name": "Schweiz", "code": "CH" }
+    ],
+    "states": [
+      "Saarland",
+      "Rheinland-Pfalz",
+      "Hessen",
+      "Baden-Württemberg",
+      "Nordrhein-Westfalen",
+      "Bayern",
+      "Berlin",
+      "Hamburg",
+      "Niedersachsen"
+    ],
+    "majorCities": [
+      "Saarbrücken",
+      "München",
+      "Köln",
+      "Frankfurt am Main",
+      "Stuttgart",
+      "Berlin",
+      "Hamburg",
+      "Düsseldorf",
+      "Zürich",
+      "Basel",
+      "Bern",
+      "Luxemburg-Stadt"
+    ]
+  },
   "nav": [
     { "label": "Start", "url": "/" },
     { "label": "Die Fotoboxen", "url": "/die-fotoboxen/" },
@@ -69,6 +102,7 @@
     { "title": "Individuelles Drucklayout", "text": "Vorlagen oder Ihre Layoutwünsche — Bildausgaben passend zur Eventmarke." },
     { "title": "Touchscreen mit Ihrem CI", "text": "Menüführung der Bildschirmanzeige in Ihrer Corporate Identity." },
     { "title": "Greenscreen-KI seit 2019", "text": "Pioneer-Erfahrung mit KI-Hintergrundsystemen — kein klobiges Greenscreen-Gestell, sondern moderne Software-Lösung." },
+    { "title": "KI-Charaktergenerierung (NEU)", "text": "Aus jedem Gast einen kompletten Charakter — Astronaut, Pirat, Anime, Cyberpunk. KI-Modell läuft lokal auf der Box, DSGVO-konform ohne Cloud-Übertragung." },
     { "title": "Studio-Beleuchtung", "text": "Professionelle Fotograf-Studiolicht-Sets — keine zusätzlichen Lichtquellen vor Ort nötig." },
     { "title": "Schnellaufbau für Messen", "text": "Kompakte, stylische Fotoboxen in unter 10 Minuten betriebsbereit." },
     { "title": "24/7-Telefon-Support", "text": "Bei Buchung erhalten Sie unsere Hotline-Nummer für Notfälle rund um die Uhr." },
@@ -154,6 +188,13 @@
       "tagline": "Der magische Spiegel mit Touchscreen",
       "url": "/die-fotoboxen/magic-mirror/",
       "summary": "Eleganter Bildschirm-Spiegel (1,90 × 80 cm) mit interaktiver Animation — Eye-Catcher für hochwertige Firmenevents. Optional mit Geldeinwurf und Barcodescanner für Spenden- oder Bezahlmodus."
+    },
+    {
+      "slug": "ki-box",
+      "name": "KI-Fotobox",
+      "tagline": "Komplette Charaktere per KI — aus jedem Gast",
+      "url": "/die-fotoboxen/ki-box/",
+      "summary": "Aus einem normalen Gastbild macht die KI in Sekunden komplett neue Charaktere — Astronaut, Pirat, Anime-Figur, Renaissance-Portrait, Cyberpunk, Fantasy-Wesen. Keine Requisiten nötig, kein Greenscreen. Modell läuft lokal auf der Box — DSGVO-konform, keine Cloud-Übertragung."
     },
     {
       "slug": "feuerwehrbus",
