@@ -98,18 +98,17 @@
     { "title": "Profi-Equipment", "text": "Spiegelreflex-Kameras, Studio-Blitzanlagen, High-End-Thermodrucker (Druckzeit 8–10 Sekunden)." },
     { "title": "DSGVO-konformer Foto-Download", "text": "Zugang nur per individuellem PIN auf dem Druck — keine offenen Galerien, keine Datenlecks." },
     { "title": "Foto-Statistiken in Echtzeit", "text": "Admin-Link für Auftraggeber — alle Eventdaten live während der Veranstaltung einsehbar." },
-    { "title": "Branding nach Ihrem CI", "text": "Inhouse-Großformatdruck und Schneidplotter — Fotobox-Branding auch kurzfristig umsetzbar." },
+    { "title": "DTP Aufbau nach Ihrer Vorgabe", "text": "Großformatdruck und Schneidplotter — Fotobox-Folierung nach Ihrer Vorgabe auch kurzfristig umsetzbar." },
     { "title": "Individuelles Drucklayout", "text": "Vorlagen oder Ihre Layoutwünsche — Bildausgaben passend zur Eventmarke." },
     { "title": "Touchscreen mit Ihrem CI", "text": "Menüführung der Bildschirmanzeige in Ihrer Corporate Identity." },
     { "title": "Greenscreen-KI seit 2019", "text": "Pioneer-Erfahrung mit KI-Hintergrundsystemen — kein klobiges Greenscreen-Gestell, sondern moderne Software-Lösung." },
-    { "title": "KI-Charaktergenerierung (NEU)", "text": "Aus jedem Gast einen kompletten Charakter — Astronaut, Pirat, Anime, Cyberpunk. KI-Modell läuft lokal auf der Box, DSGVO-konform ohne Cloud-Übertragung." },
+    { "title": "KI-Charaktergenerierung (NEU)", "text": "Aus jedem Gast einen kompletten Charakter — Astronaut, Pirat, Anime, Cyberpunk. DSGVO-konforme Verarbeitung auf einem sicheren Server in Deutschland." },
     { "title": "Studio-Beleuchtung", "text": "Professionelle Fotograf-Studiolicht-Sets — keine zusätzlichen Lichtquellen vor Ort nötig." },
     { "title": "Schnellaufbau für Messen", "text": "Kompakte, stylische Fotoboxen in unter 10 Minuten betriebsbereit." },
     { "title": "24/7-Telefon-Support", "text": "Bei Buchung erhalten Sie unsere Hotline-Nummer für Notfälle rund um die Uhr." },
     { "title": "Backup-Systeme", "text": "Komplett eingerichtete Fotobox-Backups auf Anfrage standby — Ausfallrisiko praktisch null." },
-    { "title": "Druckbare Message-Schilder", "text": "28×16cm-Schilder mit Ihren Slogans — Inhouse-Bearbeitung auch kurzfristig." },
+    { "title": "Druckbare Message-Schilder", "text": "28×16cm-Schilder mit Ihren Slogans — auch kurzfristig umsetzbar." },
     { "title": "Requisitenkoffer", "text": "Verkleidungsutensilien für witzige Bilder gehören dazu." },
-    { "title": "Bezahl- & Spendenmodus", "text": "Magic Mirror mit eingebautem Geldeinwurf und Barcodescanner — perfekt für Spenden-Aktionen oder Eintritts-Scans." },
     { "title": "Maßgeschneidert, kein All-in-One", "text": "Wir konzipieren das Setup zu Ihrem Event — keine Stangenware." }
   ],
   "packages": [
@@ -180,21 +179,21 @@
       "name": "Klassische Fotobox",
       "tagline": "22\" Display, Live View, Profi-Druck",
       "url": "/die-fotoboxen/klassik/",
-      "summary": "Die bewährte Säulen-Fotobox — professionelles Spiegelreflex-Setup, Studio-Blitz, sofortiger Druck in 10×15cm. Bis zu 400 Ausdrucke pro Event."
+      "summary": "Die bewährte Säulen-Fotobox — professionelles Spiegelreflex-Setup, Studio-Blitz, sofortiger Druck in 10×15cm."
     },
     {
       "slug": "magic-mirror",
       "name": "Magic Mirror",
       "tagline": "Der magische Spiegel mit Touchscreen",
       "url": "/die-fotoboxen/magic-mirror/",
-      "summary": "Eleganter Bildschirm-Spiegel (1,90 × 80 cm) mit interaktiver Animation — Eye-Catcher für hochwertige Firmenevents. Optional mit Geldeinwurf und Barcodescanner für Spenden- oder Bezahlmodus."
+      "summary": "Eleganter Bildschirm-Spiegel (1,90 × 80 cm) mit interaktiver Animation — Eye-Catcher für hochwertige Firmenevents."
     },
     {
       "slug": "ki-box",
       "name": "KI-Fotobox",
       "tagline": "Komplette Charaktere per KI — aus jedem Gast",
       "url": "/die-fotoboxen/ki-box/",
-      "summary": "Aus einem normalen Gastbild macht die KI in Sekunden komplett neue Charaktere — Astronaut, Pirat, Anime-Figur, Renaissance-Portrait, Cyberpunk, Fantasy-Wesen. Keine Requisiten nötig, kein Greenscreen. Modell läuft lokal auf der Box — DSGVO-konform, keine Cloud-Übertragung."
+      "summary": "Aus einem normalen Gastbild macht die KI in Sekunden komplett neue Charaktere — Astronaut, Pirat, Anime-Figur, Renaissance-Portrait, Cyberpunk, Fantasy-Wesen. Keine Requisiten nötig, kein Greenscreen. DSGVO-konforme Verarbeitung auf einem sicheren Server in Deutschland."
     },
     {
       "slug": "feuerwehrbus",
