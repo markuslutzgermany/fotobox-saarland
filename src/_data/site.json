@@ -1,8 +1,8 @@
 {
   "url": "https://fotobox.saarland",
   "title": "fotobox.saarland",
-  "tagline": "Profi-Fotobox-Vermietung in D · LUX · CH — aus dem Saarland, deutschlandweit + grenznah verfügbar",
-  "description": "Hochwertige Fotobox-Vermietung in Deutschland, Luxemburg und der Schweiz für Firmenfeiern, Kundenevents, Messen, Tag der offenen Tür und Produkt-Launches. Stammsitz Saarbrücken — 14 Jahre Erfahrung, 2500+ Events, 10+ verschiedene Fotoboxen inkl. Magic Mirror. Outdoor-Eyecatcher über die Schwestermarke fotobus.saarland.",
+  "tagline": "Profi-Fotobox-Vermietung in D · LUX — aus dem Saarland, deutschlandweit + grenznah verfügbar",
+  "description": "Hochwertige Fotobox-Vermietung in Deutschland und Luxemburg für Firmenfeiern, Kundenevents, Messen, Tag der offenen Tür und Produkt-Launches. Stammsitz Saarbrücken — 14 Jahre Erfahrung, 2500+ Events, 10+ verschiedene Fotoboxen inkl. Magic Mirror. Outdoor-Eyecatcher über die Schwestermarke fotobus.saarland.",
   "brand": {
     "name": "Foto Lutz",
     "company": "Fotolutz Complex GmbH",
@@ -45,8 +45,7 @@
     "primary": "Saarland (Stammregion)",
     "countries": [
       { "name": "Deutschland", "code": "DE" },
-      { "name": "Luxemburg", "code": "LU" },
-      { "name": "Schweiz", "code": "CH" }
+      { "name": "Luxemburg", "code": "LU" }
     ],
     "states": [
       "Saarland",
@@ -68,9 +67,6 @@
       "Berlin",
       "Hamburg",
       "Düsseldorf",
-      "Zürich",
-      "Basel",
-      "Bern",
       "Luxemburg-Stadt"
     ]
   },
