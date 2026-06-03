@@ -91,7 +91,7 @@
     { "title": "Größter Anbieter im Saarland", "text": "Über 10 verschiedene Fotobox-Systeme — flexibel auf jedes Event abgestimmt." },
     { "title": "14 Jahre Praxis", "text": "Seit 2012 ausschließlich Fotobox-Geschäft — kein Nebenerwerb, sondern unser tägliches Brot." },
     { "title": "2500+ Events", "text": "National und international betreut — 99% der Kundenwünsche umsetzbar." },
-    { "title": "Profi-Equipment", "text": "Spiegelreflex-Kameras, Studio-Blitzanlagen, High-End-Thermodrucker (Druckzeit 8–10 Sekunden)." },
+    { "title": "Profi-Equipment", "text": "Spiegelreflex-Kameras, Studio-Blitzanlagen, High-End-Thermodrucker (Druckzeit 12 Sekunden)." },
     { "title": "DSGVO-konformer Foto-Download", "text": "Zugang nur per individuellem PIN auf dem Druck — keine offenen Galerien, keine Datenlecks." },
     { "title": "Foto-Statistiken in Echtzeit", "text": "Admin-Link für Auftraggeber — alle Eventdaten live während der Veranstaltung einsehbar." },
     { "title": "DTB-Aufbau nach Ihrer Vorgabe", "text": "Datentechnischer Bildaufbau aus der Druckvorstufe — Logo, Datum, Ihre Message, Beschnittzugabe und Farbprofil sauber für den Sofortdruck aufbereitet." },
@@ -117,12 +117,13 @@
       "features": [
         "Hochwertige Fotobox mit 22\" Display, Live View, Touch-Screen, Spiegelreflexkamera",
         "Digitale Flatrate",
-        "400 Fotoausdrucke 10×15cm mit High-Performance-Drucker (8–10 s pro Druck)",
+        "400 Fotoausdrucke 10×15cm mit High-Performance-Drucker (12 Sek. pro Druck)",
         "Fotohintergrund Ihre Location, oder unsere Backgroundsysteme",
         "DTB-Aufbau nach Ihrer Vorgabe (Logo, Datum, Ihre Message auf dem Sofortprint)",
         "Professionelles Studio-Blitzsystem",
         "Requisitentisch mit Husse — in jedem Paket enthalten",
         "Individuelle Foto-Galerie für jeden Gast — Zugriff nur per persönlichem PIN auf dem Druck. Keine kollektive Galerie, kein Datenleck-Risiko (DSGVO-konform)",
+        "TeamViewer-Online-Support mit Router-Verbindung direkt zur Fotobox — sofortige Hilfe bei Fragen, kein Wartezeitstress (besonders wichtig im Selfservice-Setup)",
         "Nutzungsdauer: ein Eventtag/Abend",
         "Lieferung am Eventtag, Abholung am Folgetag — Auf- und Abbau durch unser Personal",
         "Anfahrt in Saarbrücken inklusive — weitere Distanzen auf Anfrage"
@@ -138,7 +139,7 @@
       "features": [
         "Hochwertige Fotobox mit 22\" Display, Live View, Touch-Screen, Spiegelreflexkamera",
         "Digitale Flatrate",
-        "400 Fotoausdrucke 10×15cm mit High-Performance-Drucker (8–10 s pro Druck)",
+        "400 Fotoausdrucke 10×15cm mit High-Performance-Drucker (12 Sek. pro Druck)",
         "5 Std. Mitarbeiter-Betreuung während des Events",
         "Professionelles Blitzsystem für perfekte Ausleuchtung",
         "Frei wählbare Fotohintergründe per KI-Background-System — Ihr CI-Hintergrund oder kreative Welten",
@@ -159,7 +160,7 @@
       "features": [
         "Hochwertige Fotobox mit 22\" Display, Live View, Touch-Screen, Spiegelreflexkamera",
         "Digitale Flatrate",
-        "800 Fotoausdrucke 10×15cm — Druck-Flatrate auf Anfrage erweiterbar (8–10 s pro Druck)",
+        "800 Fotoausdrucke 10×15cm — Druck-Flatrate auf Anfrage erweiterbar (12 Sek. pro Druck)",
         "Auf- & Abbau plus 8 Std. Mitarbeiter-Betreuung",
         "Frei wählbare Fotohintergründe per KI-Background-System — Ihr CI-Hintergrund oder kreative Welten",
         "Professionelles Blitzsystem für perfekte Ausleuchtung",
