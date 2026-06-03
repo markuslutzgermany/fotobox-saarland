@@ -288,6 +288,28 @@ p { margin: 0 0 var(--space-3); }
   border-radius: var(--radius);
   box-shadow: var(--shadow-lg);
 }
+
+/* Bildergalerie — 2–3 Spalten Story-Strip mit Bildunterschriften */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-3);
+  margin: 2rem 0;
+}
+.image-gallery figure { margin: 0; }
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  display: block;
+}
+.image-gallery figcaption {
+  font-size: 0.85rem;
+  color: var(--grey);
+  margin-top: 0.5rem;
+  text-align: center;
+}
 .card {
   background: var(--white);
   border-radius: var(--radius);
