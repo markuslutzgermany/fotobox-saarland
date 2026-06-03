@@ -37,12 +37,19 @@
 /pbg-statistik    https://archiv.fotobox.saarland/pbg-statistik     301
 
 
+# ----- Alter Konfigurator → neues zentrales Anfrageformular -----
+# Die alte URL war in Google indexiert und brachte Anfragen.
+# Statt einer separaten Seite mit Konfigurator nutzen wir das einheitliche
+# Anfrageformular auf /kontakt/. SEO-Wert vererbt sich per 301.
+
+/fotobox-buchen-geschaeftskunde/  /kontakt/  301
+
+
 # ----- Bestehende Top-URLs mit identischem Pfad -----
 # Brauchen KEINEN Redirect — Eleventy gibt sie unter gleicher URL aus:
 #   /                                ✓ identisch
 #   /impressum/                      ✓ identisch
 #   /datenschutz/                    ✓ identisch
-#   /fotobox-buchen-geschaeftskunde/ ✓ identisch (Inhalt von Konfigurator → Anfrageformular geändert, URL bleibt)
 
 
 # ----- Sekundäre Markendomains (geparkt im KAS) -----
