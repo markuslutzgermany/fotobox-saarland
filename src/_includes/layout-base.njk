@@ -50,9 +50,13 @@
 </head>
 <body>
 
+  {# Skip-Link für Tastatur-Nutzer — springt direkt zum Hauptinhalt
+     Sichtbar nur bei :focus (CSS in main.css → .skip-link) #}
+  <a class="skip-link" href="#main">Zum Inhalt springen</a>
+
   {% include "header.njk" %}
 
-  <main id="main">
+  <main id="main" tabindex="-1">
     {{ content | safe }}
   </main>
 
