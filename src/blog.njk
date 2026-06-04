@@ -1,0 +1,67 @@
+---
+layout: layout-base.njk
+title: Blog
+description: Praxiswissen rund um Fotobox-Vermietung für Firmenevents in D · LUX — Preisvergleiche, Eventberichte, Tipps für Buchung und Planung.
+permalink: /blog/
+eleventyExcludeFromCollections: true
+---
+
+<section class="section">
+  <div class="container" style="max-width:900px">
+
+    <h1>Blog</h1>
+    <p class="section__lead">
+      Praxiswissen aus 14 Jahren Fotobox-Vermietung im Saarland und darüber hinaus —
+      Preisvergleiche, Eventberichte, Tipps für die Buchung Ihres Firmenevents.
+    </p>
+
+    {% set posts = collections.post | reverse %}
+
+    {% if posts | length == 0 %}
+      <p style="color:var(--grey);padding:2rem;background:var(--light);border-radius:var(--radius);text-align:center">
+        Erster Beitrag erscheint in Kürze.
+      </p>
+    {% else %}
+      <div class="blog-list" style="margin-top:2rem">
+        {% for post in posts %}
+          <article class="blog-list__item card"
+                   style="margin-bottom:1.5rem;padding:1.75rem;border:1px solid var(--light)">
+
+            {% if post.data.topic %}
+              <p style="color:var(--red);font-weight:900;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;margin:0">
+                {{ post.data.topic }}
+              </p>
+            {% endif %}
+
+            <h2 style="margin:0.25rem 0 0.5rem;font-size:1.5rem">
+              <a href="{{ post.url }}" style="color:var(--dark);text-decoration:none">
+                {{ post.data.title }}
+              </a>
+            </h2>
+
+            <p style="color:var(--grey);font-size:0.9rem;margin:0 0 0.75rem">
+              <time datetime="{{ post.date | isoDate }}">{{ post.date | dateDe }}</time>
+              {% if post.data.readingTime %} · {{ post.data.readingTime }} Min. Lesezeit{% endif %}
+            </p>
+
+            {% if post.data.excerpt %}
+              <p style="margin:0 0 1rem">{{ post.data.excerpt }}</p>
+            {% endif %}
+
+            <p style="margin:0">
+              <a href="{{ post.url }}" style="color:var(--red);font-weight:700">
+                Weiterlesen →
+              </a>
+            </p>
+
+          </article>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    <p style="margin-top:3rem;color:var(--grey);font-size:0.9rem">
+      RSS-Feed: <a href="/feed.xml">/feed.xml</a>
+    </p>
+
+  </div>
+</section>

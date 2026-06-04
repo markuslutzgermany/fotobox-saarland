@@ -82,6 +82,7 @@
     { "label": "Fotoprintmodul", "url": "/fotoprintmodul/" },
     { "label": "Anlässe", "url": "/anlaesse/" },
     { "label": "Preise", "url": "/preise/" },
+    { "label": "Blog", "url": "/blog/" },
     { "label": "FAQ", "url": "/faq/" },
     { "label": "Kontakt", "url": "/kontakt/" }
   ],

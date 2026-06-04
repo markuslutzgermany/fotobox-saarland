@@ -15,6 +15,14 @@ export default function (eleventyConfig) {
   // Year shortcode (für Footer-Copyright)
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
+  // Date-Filter für Blog (de-DE Format: "4. Juni 2026")
+  eleventyConfig.addFilter("dateDe", (d) =>
+    new Intl.DateTimeFormat("de-DE", { day: "numeric", month: "long", year: "numeric" }).format(new Date(d))
+  );
+
+  // ISO-Datum für <time datetime>-Attribute + RSS
+  eleventyConfig.addFilter("isoDate", (d) => new Date(d).toISOString());
+
   return {
     dir: {
       input: "src",
