@@ -125,8 +125,8 @@ p { margin: 0 0 var(--space-3); }
   justify-content: space-between;
   gap: var(--space-4);
 }
-.topbar a { color: var(--white); }
-.topbar a:hover { color: var(--white); opacity: 0.85; }
+.topbar a:not(.topbar__fotodownload) { color: var(--white); }
+.topbar a:not(.topbar__fotodownload):hover { color: var(--white); opacity: 0.85; }
 
 /* Fotodownload-Pill in Topbar (weiß hinterlegt, roter Text — auffälliger CTA) */
 .topbar__fotodownload {
