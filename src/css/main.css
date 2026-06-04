@@ -4,25 +4,29 @@
    ============================================================ */
 
 /* ----- Lokale Web-Fonts (DSGVO-konform — keine Google-Fonts-CDN) -----
-   Lato-TTFs liegen unter /assets/fonts/Lato/ (Google-Fonts-Standard-Ordnerstruktur).
+   Lato liegt unter /assets/fonts/Lato/ als WOFF2 (~23 KB pro Schnitt) mit
+   TTF-Fallback (~70 KB) für ältere Browser. Modern wählt WOFF2 = 3× schneller.
    Sind keine Dateien vorhanden, greift der System-Stack-Fallback in --font-body. */
 @font-face {
   font-family: "Lato";
-  src: url("/assets/fonts/Lato/Lato-regular.ttf") format("truetype");
+  src: url("/assets/fonts/Lato/Lato-regular.woff2") format("woff2"),
+       url("/assets/fonts/Lato/Lato-regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Lato";
-  src: url("/assets/fonts/Lato/Lato-bold.ttf") format("truetype");
+  src: url("/assets/fonts/Lato/Lato-bold.woff2") format("woff2"),
+       url("/assets/fonts/Lato/Lato-bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Lato";
-  src: url("/assets/fonts/Lato/Lato-black.ttf") format("truetype");
+  src: url("/assets/fonts/Lato/Lato-black.woff2") format("woff2"),
+       url("/assets/fonts/Lato/Lato-black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
   font-display: swap;

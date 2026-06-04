@@ -27,6 +27,12 @@
     "since": 2015
   },
   "fotodownloadUrl": "https://galerie.fotobox.saarland/",
+  "ogImage": {
+    "url": "/assets/img/wirtschaftsball-setup.jpg",
+    "width": 1280,
+    "height": 853,
+    "alt": "Foto Lutz Klassik-Fotobox im Einsatz beim Saarländischen Wirtschaftsball"
+  },
   "stats": {
     "yearsExperience": 14,
     "eventsCount": "2500+",

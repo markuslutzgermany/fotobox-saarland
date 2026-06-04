@@ -9,17 +9,34 @@
   {# Canonical #}
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
 
-  {# Open Graph + Twitter (sister-brand-konsistent zu fotobus) #}
+  {# Open Graph + Twitter (sister-brand-konsistent zu fotobus)
+     Per-Page-Override über Frontmatter `ogImage: /assets/img/foo.jpg` möglich,
+     sonst Default-Vorschaubild aus site.json (site.ogImage).
+     Wichtig: og:image MUSS absolute URL sein (mit Schema). #}
   <meta property="og:type" content="website">
   <meta property="og:locale" content="de_DE">
   <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:title" content="{{ title or site.title }}">
   <meta property="og:description" content="{{ description or site.description }}">
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+  <meta property="og:image" content="{{ site.url }}{{ ogImage or site.ogImage.url }}">
+  <meta property="og:image:width" content="{{ ogImageWidth or site.ogImage.width }}">
+  <meta property="og:image:height" content="{{ ogImageHeight or site.ogImage.height }}">
+  <meta property="og:image:alt" content="{{ ogImageAlt or site.ogImage.alt }}">
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title or site.title }}">
+  <meta name="twitter:description" content="{{ description or site.description }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ ogImage or site.ogImage.url }}">
 
-  {# Favicon — Platzhalter, später ersetzen #}
-  <link rel="icon" href="/favicon.ico">
+  {# Favicon — generiert mit realfavicongenerator.net (04.06.2026)
+     Reihenfolge ist wichtig: SVG zuerst (moderne Browser), .ico als Fallback,
+     apple-touch-icon für iOS, manifest für PWA + Android Chrome. #}
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg">
+  <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+  <meta name="theme-color" content="#e30613">
 
   {# Fonts: Lato lokal (DSGVO-konform — keine externen Calls)
      CSS lädt Lato per @font-face aus /assets/fonts/, mit System-Stack als Fallback.

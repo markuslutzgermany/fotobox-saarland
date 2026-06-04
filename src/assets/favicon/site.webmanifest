@@ -1,0 +1,23 @@
+{
+  "name": "fotobox.saarland — Profi-Fotobox-Vermietung",
+  "short_name": "fotobox.saarland",
+  "lang": "de",
+  "icons": [
+    {
+      "src": "/assets/favicon/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/assets/favicon/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#e30613",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "start_url": "/"
+}

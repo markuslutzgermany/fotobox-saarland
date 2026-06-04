@@ -1,14 +1,27 @@
 # ============================================================
 # Cloudflare Pages — _redirects für fotobox.saarland-Migration
-# Stand: 2026-05-10 (vor DNS-Cutover)
-# Doku: ../02-URL-Inventar.md
+# Stand: 2026-06-04 (Cutover-Ready — finale Fassung)
+# Doku: ../02-URL-Inventar.md, ../10-Migrations-Konzept-2026-05-31.md
 #
 # Format: <source-path>  <destination>  <status>
 # Status: 301 (permanent), 302 (temporary), 200 (proxy), 404 (custom 404)
+#
+# Inventar-Basis: 13 Sitemap-URLs der alten WP (Stand 2026-05-10).
+# Davon 5 in Googles Index, 8 nur in Sitemap (PBG + Test-Pages von 2019).
+# Alle abgedeckt — siehe Block-Kommentare unten.
+#
+# URL-identisch (kein Redirect nötig, Eleventy liefert unter gleichem Pfad):
+#   /                 ✓ Startseite
+#   /impressum/       ✓ Identisch
+#   /datenschutz/     ✓ Identisch
+#
 # Hinweise:
 #   - www→apex erledigt Cloudflare automatisch via DNS (kein Eintrag hier)
-#   - 410 Gone wird von Cloudflare nicht unterstützt → 301 zur Startseite
+#   - Galerie-Subdomain galerie.fotobox.saarland hat eigene DNS-Zone — nicht hier
+#   - Archiv-Subdomain archiv.fotobox.saarland bleibt auf alter WP (DNS bei KAS)
 #   - Inline-Kommentare hinter Regeln vermeiden (Cloudflare parst das schief)
+#   - Kein Catch-All /* → / bewusst weggelassen: bessere SEO-Praxis 2024+ ist
+#     echte 404 zeigen statt alles auf Startseite zu leiten (kein Soft-404-Risiko)
 # ============================================================
 
 
