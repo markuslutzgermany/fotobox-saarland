@@ -398,14 +398,75 @@ p { margin: 0 0 var(--space-3); }
 }
 .comparison-table tbody tr:last-child td { border-bottom: 0; }
 
-/* Mobile: Tabelle scrollt horizontal — visueller Hinweis durch Schatten am Rand */
+/* Wischen-Hint über der Tabelle — nur Mobile sichtbar */
+.comparison-hint {
+  display: none;
+}
+.comparison-hint__arrow {
+  display: inline-block;
+  font-weight: 900;
+  color: var(--red);
+  font-size: 1.1em;
+}
+
+/* Mobile: Tabelle scrollt horizontal — drei Hinweise:
+   1. Hint-Banner über der Tabelle mit Pfeil-Animation
+   2. Sichtbarer Gradient-Schatten am rechten Rand
+   3. Erste Spalte sticky beim Horizontal-Scroll (Kontext bleibt)              */
 @media (max-width: 720px) {
-  .comparison-wrap {
-    box-shadow: inset -10px 0 8px -8px rgba(0,0,0,0.15), var(--shadow-lg);
+  .comparison-hint {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1.5rem 0 0.5rem;
+    padding: 0.6rem 1rem;
+    background: var(--light);
+    border-radius: var(--radius);
+    color: var(--dark);
+    font-size: 0.85rem;
+    font-weight: 700;
   }
+  .comparison-hint__arrow {
+    animation: comparison-arrow-pulse 1.6s ease-in-out infinite;
+  }
+  .comparison-hint__arrow:last-child {
+    animation-delay: 0.8s;
+  }
+
+  /* Stärker sichtbarer Schatten am rechten Rand — Signal "es geht weiter" */
+  .comparison-wrap {
+    position: relative;
+    box-shadow: inset -16px 0 14px -10px rgba(227, 6, 19, 0.35), var(--shadow-lg);
+  }
+
   .comparison-table { font-size: 0.85rem; }
   .comparison-table thead th,
   .comparison-table tbody td { padding: 0.6rem 0.75rem; }
+
+  /* Sticky erste Spalte — bleibt beim horizontalen Scrollen sichtbar */
+  .comparison-table thead th:first-child,
+  .comparison-table tbody td:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+    box-shadow: 2px 0 3px -2px rgba(0,0,0,0.15);
+  }
+  /* Background-Refresh weil sticky transparent durchscheint */
+  .comparison-table thead th:first-child {
+    background: var(--dark);
+  }
+  .comparison-table tbody td:first-child {
+    background: var(--light);
+  }
+}
+
+@keyframes comparison-arrow-pulse {
+  0%, 100% { transform: translateX(0); opacity: 0.6; }
+  50%      { transform: translateX(4px); opacity: 1; }
+}
+.comparison-hint__arrow:first-child {
+  animation-direction: reverse;
 }
 
 /* Bildergalerie — 2–3 Spalten Story-Strip mit Bildunterschriften */
