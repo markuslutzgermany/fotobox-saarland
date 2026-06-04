@@ -10,23 +10,23 @@ eleventyExcludeFromCollections: true
     <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
     <description>{{ site.description }}</description>
     <language>de-DE</language>
-    {%- set lastPost = collections.post | last %}
-    {%- if lastPost %}
+    {%- if collections.post and collections.post.length %}
+      {%- set lastPost = collections.post | last %}
     <lastBuildDate>{{ lastPost.date | isoDate }}</lastBuildDate>
-    {%- endif %}
-    {%- for post in collections.post | reverse %}
+      {%- for post in collections.post | reverse %}
     <item>
       <title>{{ post.data.title }}</title>
       <link>{{ site.url }}{{ post.url }}</link>
       <guid isPermaLink="true">{{ site.url }}{{ post.url }}</guid>
       <pubDate>{{ post.date | isoDate }}</pubDate>
-      {%- if post.data.author %}
+        {%- if post.data.author %}
       <author>noreply@fotobox.saarland ({{ post.data.author }})</author>
-      {%- endif %}
-      {%- if post.data.excerpt %}
+        {%- endif %}
+        {%- if post.data.excerpt %}
       <description><![CDATA[{{ post.data.excerpt }}]]></description>
-      {%- endif %}
+        {%- endif %}
     </item>
-    {%- endfor %}
+      {%- endfor %}
+    {%- endif %}
   </channel>
 </rss>

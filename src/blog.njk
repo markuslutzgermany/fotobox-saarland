@@ -15,7 +15,8 @@ eleventyExcludeFromCollections: true
       Preisvergleiche, Eventberichte, Tipps für die Buchung Ihres Firmenevents.
     </p>
 
-    {% set posts = collections.post | reverse %}
+    {% set posts = collections.post if collections.post else [] %}
+    {% set posts = posts | reverse %}
 
     {% if posts | length == 0 %}
       <p style="color:var(--grey);padding:2rem;background:var(--light);border-radius:var(--radius);text-align:center">
