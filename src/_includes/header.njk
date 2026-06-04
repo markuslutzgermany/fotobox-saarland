@@ -1,9 +1,13 @@
 <div class="topbar">
-  <div class="container">
+  <div class="container topbar__inner">
     <span class="topbar__hotline">
       <span aria-hidden="true">📞</span>
       Gratis-Hotline: <a href="tel:{{ site.brand.phoneTel }}"><strong>{{ site.brand.phone }}</strong></a> · {{ site.brand.phoneLabel }}
     </span>
+    <a href="{{ site.fotodownloadUrl }}" class="topbar__fotodownload" rel="noopener">
+      <span aria-hidden="true">📥</span>
+      Fotodownload
+    </a>
   </div>
 </div>
 
@@ -25,9 +29,5 @@
         {% endfor %}
       </ul>
     </nav>
-
-    <a href="{{ site.fotodownloadUrl }}" class="btn-fotodownload" rel="noopener">
-      Hier zum Fotodownload
-    </a>
   </div>
 </header>
