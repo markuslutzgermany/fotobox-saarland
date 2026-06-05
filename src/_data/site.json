@@ -182,6 +182,17 @@
     }
   ],
   "packageDisclaimer": "Unsere gewerblichen Fotoboxen und Angebote richten sich ausschließlich an Unternehmen, Gewerbetreibende, Verbände sowie öffentliche Institutionen und gelten nicht für private Kunden.",
+  "priceExtras": {
+    "extraPrints": {
+      "amount": 100,
+      "price": 39,
+      "currency": "EUR",
+      "vatNote": "+ MwSt.",
+      "label": "+ 100 Drucke",
+      "shortDesc": "100 zusätzliche Drucke für 39 € + MwSt.",
+      "fullDesc": "Reichen die enthaltenen Drucke nicht? Pro 100 Zusatzdrucke fällt nur ein Aufpreis von 39 € + MwSt. an. Das Schöne: Sie müssen das nicht im Voraus festlegen — die Nachbuchung ist auch während des Events unkompliziert möglich, der Druck läuft ohne Unterbrechung weiter. Gilt für Basic, Bestseller und alle Sondersetups."
+    }
+  },
   "boxes": [
     {
       "slug": "klassik",

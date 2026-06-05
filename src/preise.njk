@@ -51,6 +51,16 @@ permalink: /preise/
       </article>
     {% endfor %}
 
+    {# Aufpreis-Block — gilt für alle drei Pakete + Sondersetups #}
+    <div style="background:var(--light);padding:1.75rem 2rem;border-radius:var(--radius);border-left:4px solid var(--red);margin:2rem 0">
+      <h3 style="margin-top:0;font-size:1.1rem">
+        Mehr Drucke nötig? {{ site.priceExtras.extraPrints.label }} für {{ site.priceExtras.extraPrints.price }} € {{ site.priceExtras.extraPrints.vatNote }}
+      </h3>
+      <p style="margin-bottom:0">
+        {{ site.priceExtras.extraPrints.fullDesc }}
+      </p>
+    </div>
+
     <h2 style="margin-top:3rem">Sondersetups &amp; Custom-Anfragen</h2>
     <p>
       <strong><a href="/die-fotoboxen/magic-mirror/">Magic Mirror</a></strong> — Premium-Linie mit
