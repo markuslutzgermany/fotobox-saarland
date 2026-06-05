@@ -24,7 +24,9 @@
     "name": "Feuerwehr-Fotobus Saarland",
     "url": "https://fotobus.saarland",
     "usp": "Eye-Catcher-Outdoor-Events und Premium-Hochzeiten",
-    "since": 2015
+    "since": 2015,
+    "b2bPriceDay": 1590,
+    "b2bPriceLabel": "1.590 € + MwSt. / Tag"
   },
   "fotodownloadUrl": "https://galerie.fotobox.saarland/",
   "ogImage": {
@@ -50,8 +52,14 @@
   "regionsServed": {
     "primary": "Saarland (Stammregion)",
     "countries": [
-      { "name": "Deutschland", "code": "DE" },
-      { "name": "Luxemburg", "code": "LU" }
+      {
+        "name": "Deutschland",
+        "code": "DE"
+      },
+      {
+        "name": "Luxemburg",
+        "code": "LU"
+      }
     ],
     "states": [
       "Saarland",
@@ -77,43 +85,139 @@
     ]
   },
   "nav": [
-    { "label": "Start", "url": "/" },
-    { "label": "Fotoboxen", "url": "/die-fotoboxen/" },
-    { "label": "Fotoprintmodul", "url": "/fotoprintmodul/" },
-    { "label": "Anlässe", "url": "/anlaesse/" },
-    { "label": "Preise", "url": "/preise/" },
-    { "label": "Blog", "url": "/blog/" },
-    { "label": "FAQ", "url": "/faq/" },
-    { "label": "Kontakt", "url": "/kontakt/" }
+    {
+      "label": "Start",
+      "url": "/"
+    },
+    {
+      "label": "Fotoboxen",
+      "url": "/die-fotoboxen/"
+    },
+    {
+      "label": "Fotoprintmodul",
+      "url": "/fotoprintmodul/"
+    },
+    {
+      "label": "Anlässe",
+      "url": "/anlaesse/"
+    },
+    {
+      "label": "Preise",
+      "url": "/preise/"
+    },
+    {
+      "label": "Blog",
+      "url": "/blog/"
+    },
+    {
+      "label": "FAQ",
+      "url": "/faq/"
+    },
+    {
+      "label": "Kontakt",
+      "url": "/kontakt/"
+    }
   ],
   "audience": "B2B",
   "audienceTypes": [
-    { "label": "Firmenfeier", "url": "/anlaesse/firmenfeier/" },
-    { "label": "Kundenevent", "url": "/anlaesse/kundenevent/" },
-    { "label": "Messe", "url": "/anlaesse/messe/" },
-    { "label": "Tag der offenen Tür", "url": "/anlaesse/tag-der-offenen-tuer/" },
-    { "label": "Produkt-Launch", "url": "/anlaesse/produkt-launch/" }
+    {
+      "label": "Firmenfeier",
+      "url": "/anlaesse/firmenfeier/"
+    },
+    {
+      "label": "Kundenevent",
+      "url": "/anlaesse/kundenevent/"
+    },
+    {
+      "label": "Messe",
+      "url": "/anlaesse/messe/"
+    },
+    {
+      "label": "Tag der offenen Tür",
+      "url": "/anlaesse/tag-der-offenen-tuer/"
+    },
+    {
+      "label": "Produkt-Launch",
+      "url": "/anlaesse/produkt-launch/"
+    }
   ],
   "usps": [
-    { "title": "Größter Anbieter im Saarland", "text": "Über 10 verschiedene Fotobox-Systeme — flexibel auf jedes Event abgestimmt." },
-    { "title": "14 Jahre Praxis", "text": "Seit 2012 ausschließlich Fotobox-Geschäft — kein Nebenerwerb, sondern unser tägliches Brot." },
-    { "title": "2500+ Events", "text": "National und international betreut — 99% der Kundenwünsche umsetzbar." },
-    { "title": "Skalierbar bis Großevent", "text": "Von 50 bis 1.000+ Gästen problemlos — ob Mitarbeiter-Feier oder Konzern-Gala." },
-    { "title": "Profi-Equipment", "text": "Spiegelreflex-Kameras, Studio-Blitzanlagen, High-End-Thermodrucker (Druckzeit 12 Sekunden)." },
-    { "title": "DSGVO-konformer Foto-Download", "text": "Zugang nur per individuellem PIN auf dem Druck — keine offenen Galerien, keine Datenlecks." },
-    { "title": "Foto-Statistiken in Echtzeit", "text": "Admin-Link für Auftraggeber — alle Eventdaten live während der Veranstaltung einsehbar." },
-    { "title": "DTB-Aufbau nach Ihrer Vorgabe", "text": "Datentechnischer Bildaufbau aus der Druckvorstufe — Logo, Datum, Ihre Message, Beschnittzugabe und Farbprofil sauber für den Sofortdruck aufbereitet." },
-    { "title": "DTB-Druckdaten-Aufbau", "text": "Aus Ihren CI-Vorlagen technisch sauber aufbereitete Druckdaten — Auflösung, Farbprofil und Beschnittzugabe nach Norm." },
-    { "title": "Touchscreen mit Ihrem CI", "text": "Menüführung der Bildschirmanzeige in Ihrer Corporate Identity." },
-    { "title": "Greenscreen-KI seit 2019", "text": "Pioneer-Erfahrung mit KI-Hintergrundsystemen — kein klobiges Greenscreen-Gestell, sondern moderne Software-Lösung." },
-    { "title": "KI-Charaktergenerierung (NEU)", "text": "Aus jedem Gast einen kompletten Charakter — Astronaut, Pirat, Anime, Cyberpunk. Auf Server in Deutschland." },
-    { "title": "Studio-Beleuchtung", "text": "Professionelle Fotograf-Studiolicht-Sets — keine zusätzlichen Lichtquellen vor Ort nötig." },
-    { "title": "Schnellaufbau für Messen", "text": "Kompakte, stylische Fotoboxen in unter 10 Minuten betriebsbereit." },
-    { "title": "24/7-Telefon-Support", "text": "Bei Buchung erhalten Sie unsere Hotline-Nummer für Notfälle rund um die Uhr." },
-    { "title": "Backup-Systeme", "text": "Komplett eingerichtete Fotobox-Backups auf Anfrage standby — Ausfallrisiko praktisch null." },
-    { "title": "Druckbare Message-Schilder", "text": "28×16cm-Schilder mit Ihren Slogans — auch kurzfristig umsetzbar." },
-    { "title": "Requisitentisch mit Husse", "text": "Verkleidungsutensilien für witzige Bilder — in jedem Paket enthalten." },
-    { "title": "Maßgeschneidert, kein All-in-One", "text": "Wir konzipieren das Setup zu Ihrem Event — keine Stangenware." }
+    {
+      "title": "Größter Anbieter im Saarland",
+      "text": "Über 10 verschiedene Fotobox-Systeme — flexibel auf jedes Event abgestimmt."
+    },
+    {
+      "title": "14 Jahre Praxis",
+      "text": "Seit 2012 ausschließlich Fotobox-Geschäft — kein Nebenerwerb, sondern unser tägliches Brot."
+    },
+    {
+      "title": "2500+ Events",
+      "text": "National und international betreut — 99% der Kundenwünsche umsetzbar."
+    },
+    {
+      "title": "Skalierbar bis Großevent",
+      "text": "Von 50 bis 1.000+ Gästen problemlos — ob Mitarbeiter-Feier oder Konzern-Gala."
+    },
+    {
+      "title": "Profi-Equipment",
+      "text": "Spiegelreflex-Kameras, Studio-Blitzanlagen, High-End-Thermodrucker (Druckzeit 12 Sekunden)."
+    },
+    {
+      "title": "DSGVO-konformer Foto-Download",
+      "text": "Zugang nur per individuellem PIN auf dem Druck — keine offenen Galerien, keine Datenlecks."
+    },
+    {
+      "title": "Foto-Statistiken in Echtzeit",
+      "text": "Admin-Link für Auftraggeber — alle Eventdaten live während der Veranstaltung einsehbar."
+    },
+    {
+      "title": "DTB-Aufbau nach Ihrer Vorgabe",
+      "text": "Datentechnischer Bildaufbau aus der Druckvorstufe — Logo, Datum, Ihre Message, Beschnittzugabe und Farbprofil sauber für den Sofortdruck aufbereitet."
+    },
+    {
+      "title": "DTB-Druckdaten-Aufbau",
+      "text": "Aus Ihren CI-Vorlagen technisch sauber aufbereitete Druckdaten — Auflösung, Farbprofil und Beschnittzugabe nach Norm."
+    },
+    {
+      "title": "Touchscreen mit Ihrem CI",
+      "text": "Menüführung der Bildschirmanzeige in Ihrer Corporate Identity."
+    },
+    {
+      "title": "Greenscreen-KI seit 2019",
+      "text": "Pioneer-Erfahrung mit KI-Hintergrundsystemen — kein klobiges Greenscreen-Gestell, sondern moderne Software-Lösung."
+    },
+    {
+      "title": "KI-Charaktergenerierung (NEU)",
+      "text": "Aus jedem Gast einen kompletten Charakter — Astronaut, Pirat, Anime, Cyberpunk. Auf Server in Deutschland."
+    },
+    {
+      "title": "Studio-Beleuchtung",
+      "text": "Professionelle Fotograf-Studiolicht-Sets — keine zusätzlichen Lichtquellen vor Ort nötig."
+    },
+    {
+      "title": "Schnellaufbau für Messen",
+      "text": "Kompakte, stylische Fotoboxen in unter 10 Minuten betriebsbereit."
+    },
+    {
+      "title": "24/7-Telefon-Support",
+      "text": "Bei Buchung erhalten Sie unsere Hotline-Nummer für Notfälle rund um die Uhr."
+    },
+    {
+      "title": "Backup-Systeme",
+      "text": "Komplett eingerichtete Fotobox-Backups auf Anfrage standby — Ausfallrisiko praktisch null."
+    },
+    {
+      "title": "Druckbare Message-Schilder",
+      "text": "28×16cm-Schilder mit Ihren Slogans — auch kurzfristig umsetzbar."
+    },
+    {
+      "title": "Requisitentisch mit Husse",
+      "text": "Verkleidungsutensilien für witzige Bilder — in jedem Paket enthalten."
+    },
+    {
+      "title": "Maßgeschneidert, kein All-in-One",
+      "text": "Wir konzipieren das Setup zu Ihrem Event — keine Stangenware."
+    }
   ],
   "packages": [
     {
@@ -217,11 +321,11 @@
     },
     {
       "slug": "feuerwehrbus",
-      "name": "Feuerwehrbus auf fotobus.saarland",
-      "tagline": "Unsere Outdoor-Schwestermarke",
-      "url": "https://fotobus.saarland/",
-      "external": true,
-      "summary": "Outdoor-Setup auf Ihrem Werksgelände, Tag der offenen Tür oder Sommerfest? Deutschlands erster Feuerwehr-Fotobus läuft seit 2015 als unsere Schwestermarke fotobus.saarland — voll ausgestattete Profi-Fotobox eingebaut, plus echter Eyecatcher vor der Firmentür."
+      "name": "Feuerwehrbus",
+      "tagline": "Outdoor-Eyecatcher mit Klassik-Fotobox-Technik",
+      "summary": "Eyecatcher + Team-Building + Profi-Fotobox-Technik im historischen Feuerwehrauto. 1.590 € pro Tag — schließt die Lücke zwischen Premium und KI. Für Tag der offenen Tür, Sommerfest, Werksjubiläum, Marken-Events. Mehr emotionale Stories auf der Schwestermarke fotobus.saarland.",
+      "url": "/die-fotoboxen/feuerwehrbus/",
+      "external": false
     }
   ]
 }
