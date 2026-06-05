@@ -1,28 +1,5 @@
 [
   {
-    "slug": "saarlouis",
-    "name": "Saarlouis",
-    "distance": "25 Minuten",
-    "direction": "westlich",
-    "lead": "Festungsstadt, Automotive-Hochburg, lebendige Innenstadt-Gastronomie",
-    "characteristics": [
-      "Ford-Werk Saarlouis als großer Arbeitgeber und Eventbucher",
-      "Historische Festungsstadt mit aktiver Innenstadtkultur",
-      "Mittelständische Industriebetriebe und Familienunternehmen"
-    ],
-    "premiumVenues": [
-      "Theater am Ring — Tagungen, Galas",
-      "Hotel La Maison — Premium-Adresse für Firmenfeiern",
-      "Stadtgarten Saarlouis — Outdoor-Events und Sommerfeste"
-    ],
-    "otherVenues": [
-      "Mercure Hotel Saarlouis",
-      "Innenstadt-Gastronomie am Großen Markt",
-      "Werkshallen lokaler Industriebetriebe"
-    ],
-    "eventTypes": "Mitarbeiter-Sommerfeste, Mittelstands-Galas, Branchen-Treffen, Werksjubiläen"
-  },
-  {
     "slug": "homburg",
     "name": "Homburg",
     "distance": "25 Minuten",
