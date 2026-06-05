@@ -1,0 +1,70 @@
+[
+  {
+    "slug": "saarlouis",
+    "name": "Saarlouis",
+    "distance": "25 Minuten",
+    "direction": "westlich",
+    "lead": "Festungsstadt, Automotive-Hochburg, lebendige Innenstadt-Gastronomie",
+    "characteristics": [
+      "Ford-Werk Saarlouis als großer Arbeitgeber und Eventbucher",
+      "Historische Festungsstadt mit aktiver Innenstadtkultur",
+      "Mittelständische Industriebetriebe und Familienunternehmen"
+    ],
+    "premiumVenues": [
+      "Theater am Ring — Tagungen, Galas",
+      "Hotel La Maison — Premium-Adresse für Firmenfeiern",
+      "Stadtgarten Saarlouis — Outdoor-Events und Sommerfeste"
+    ],
+    "otherVenues": [
+      "Mercure Hotel Saarlouis",
+      "Innenstadt-Gastronomie am Großen Markt",
+      "Werkshallen lokaler Industriebetriebe"
+    ],
+    "eventTypes": "Mitarbeiter-Sommerfeste, Mittelstands-Galas, Branchen-Treffen, Werksjubiläen"
+  },
+  {
+    "slug": "homburg",
+    "name": "Homburg",
+    "distance": "25 Minuten",
+    "direction": "östlich",
+    "lead": "Universitätsstadt mit medizinischer Hochschule, Bosch-Standort, lebendiger Mittelstand",
+    "characteristics": [
+      "Universitätsklinikum Homburg als einer der größten Saarland-Arbeitgeber",
+      "Bosch-Werk Homburg (Common-Rail-Technologie)",
+      "Aktive mittelständische Unternehmerszene"
+    ],
+    "premiumVenues": [
+      "Saalbau Homburg — Stadthalle für Galas und Tagungen",
+      "Universitätsklinikum — Konferenz- und Tagungsbereiche",
+      "Hofgut Imsbach — Historisches Anwesen für Premium-Events"
+    ],
+    "otherVenues": [
+      "Schlossberghöhlen-Restaurant — einzigartige Eventkulisse",
+      "Hotel Schweizer Stuben",
+      "Lokale Industrieunternehmen"
+    ],
+    "eventTypes": "Medizin- und Pharma-Tagungen, Mitarbeiterfeiern, Branchen-Empfänge, Firmenjubiläen"
+  },
+  {
+    "slug": "voelklingen",
+    "name": "Völklingen",
+    "distance": "15 Minuten",
+    "direction": "westlich",
+    "lead": "UNESCO-Weltkulturerbe Völklinger Hütte — einzigartige Industriekultur-Eventkulisse",
+    "characteristics": [
+      "Völklinger Hütte als UNESCO-Weltkulturerbe (eines der wichtigsten Industriedenkmäler weltweit)",
+      "Saar-Stahl als großer Saarland-Industriebetrieb",
+      "Industriekultur-Events mit überregionaler Strahlkraft"
+    ],
+    "premiumVenues": [
+      "Völklinger Hütte (UNESCO-Weltkulturerbe) — einzigartige Eventkulisse",
+      "Gebläsehalle der Völklinger Hütte — spektakuläre Galaräume",
+      "Erzhalle und Sinteranlage — Industrie-Räume für besondere Anlässe"
+    ],
+    "otherVenues": [
+      "Konferenzräume lokaler Industrieunternehmen",
+      "Hotels in der Saarbrücker Straße"
+    ],
+    "eventTypes": "Industriekultur-Galas, Marken-Events mit Industriekulisse, Tagungen, Stahl-Branchen-Treffen"
+  }
+]
