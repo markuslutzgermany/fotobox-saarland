@@ -147,8 +147,40 @@ permalink: /
           </h3>
           <p style="font-weight:700;color:var(--red);font-size:0.9rem;margin-bottom:0.5rem">{{ box.tagline }}</p>
           <p>{{ box.summary }}</p>
+          {% if box.secondaryLink %}
+            <p style="margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--light);font-size:0.95rem">
+              🚒 <a href="{{ box.secondaryLink.url }}" rel="noopener" style="color:var(--red);font-weight:700">{{ box.secondaryLink.text }}</a>
+            </p>
+          {% endif %}
         </article>
       {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Schwester-Marken-Banner: prominenter Link zu fotobus.saarland (eigene Outdoor-Variante mit eigener Story) -->
+<section class="section" style="background:linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%);color:white;padding:4rem 0">
+  <div class="container">
+    <div style="max-width:780px;margin:0 auto;text-align:center">
+      <p style="color:var(--red);font-weight:900;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.1em;margin:0 0 0.75rem">
+        🚒 Outdoor-Variante · Schwester-Marke
+      </p>
+      <h2 style="color:white;font-size:2.25rem;margin:0 0 1rem;line-height:1.2">
+        Suchen Sie den <span style="color:var(--red)">Feuerwehr-Fotobus</span>?
+      </h2>
+      <p style="color:rgba(255,255,255,0.85);font-size:1.15rem;margin:0 0 1.5rem;line-height:1.6">
+        Unser <strong>originaler Feuerwehr-Fotobus seit 2015</strong> hat eine eigene Webseite —
+        mit kompletter emotionaler Story, Hochzeitsbildern, Event-Galerien und allen Privatkunden-Buchungen.
+        Dort finden Sie deutlich mehr Bilder, Bewertungen und Buchungsdetails als auf unserer Übersichts-Detailseite.
+      </p>
+      <p style="margin:2rem 0 0">
+        <a href="https://fotobus.saarland" rel="noopener" style="display:inline-block;background:var(--red);color:white;padding:1rem 2rem;border-radius:6px;font-weight:800;font-size:1.05rem;text-decoration:none;box-shadow:0 4px 12px rgba(229,57,53,0.4)">
+          → Feuerwehr-Fotobus mieten auf fotobus.saarland
+        </a>
+      </p>
+      <p style="color:rgba(255,255,255,0.55);font-size:0.85rem;margin:1rem 0 0">
+        Eigenständige Marke der Fotolutz Complex GmbH · ★★★★★ 5,0 / 24+ Google-Bewertungen
+      </p>
     </div>
   </div>
 </section>
