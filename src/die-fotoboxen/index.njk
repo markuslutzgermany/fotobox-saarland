@@ -9,29 +9,30 @@ permalink: /die-fotoboxen/
   <div class="container">
 
     <h1>Unsere Fotoboxen</h1>
-    <p class="section__lead">
-      Drei Indoor-Produktlinien — Klassik-Fotobox, Magic Mirror und die neue KI-Fotobox — plus die
-      Outdoor-Variante auf unserer Schwestermarke fotobus.saarland. Alle Indoor-Setups mit
-      Profi-Equipment, Studio-Licht und DSGVO-konformer Foto-Galerie.
-    </p>
 
     <div class="cards cards--2col">
       {% for box in site.boxes %}
         <article class="card" style="padding:2rem">
-          <h2 style="margin-top:0">
+          <h2 style="margin-top:0;display:flex;align-items:center;gap:0.5em">
+            <span aria-hidden="true" style="font-size:1.3em">
+              {%- if box.name == "Klassische Fotobox" -%}📷
+              {%- elif box.name == "Magic Mirror" -%}🪞
+              {%- elif box.name == "KI-Fotobox" -%}✨
+              {%- elif box.name == "Feuerwehrbus" -%}🚒
+              {%- endif -%}
+            </span>
             {% if box.external %}
               <a href="{{ box.url }}" rel="noopener">{{ box.name }} ↗</a>
             {% else %}
               <a href="{{ box.url }}">{{ box.name }}</a>
             {% endif %}
           </h2>
-          <p style="font-weight:700;color:var(--red)">{{ box.tagline }}</p>
-          <p>{{ box.summary }}</p>
-          {% if not box.external %}
-            <p><a href="{{ box.url }}">Mehr zu dieser Fotobox →</a></p>
-          {% else %}
-            <p><a href="{{ box.url }}" rel="noopener">Zur Schwesterseite ↗</a></p>
-          {% endif %}
+          <p style="font-weight:700;color:var(--red);margin:0 0 1rem">{{ box.tagline }}</p>
+          <p style="margin:0">
+            <a href="{{ box.url }}" {% if box.external %}rel="noopener"{% endif %} style="display:inline-flex;align-items:center;gap:0.4em;color:var(--red);font-weight:700;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:2px" aria-label="Mehr zur {{ box.name }} ansehen">
+              Mehr ansehen <span aria-hidden="true">→</span>
+            </a>
+          </p>
         </article>
       {% endfor %}
     </div>
