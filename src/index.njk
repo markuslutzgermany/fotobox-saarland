@@ -39,10 +39,16 @@ permalink: /
   <div class="container">
     <h2 style="text-align:center">Maßgeschneidert für Geschäftskunden</h2>
 
+    {# Icon-Map für audienceTypes: Firmenfeier · Kundenevent · Messe · Tag der offenen Tür · Produkt-Launch #}
+    {% set anlassIcons = ['🎉','🤝','🎪','🚪','🚀'] %}
+
     <div class="cards">
       {% for type in site.audienceTypes %}
         <article class="card">
-          <h3 style="margin-bottom:1rem"><a href="{{ type.url }}">{{ type.label }}</a></h3>
+          <h3 style="margin-bottom:1rem;display:flex;align-items:center;gap:0.5em">
+            <span aria-hidden="true" style="font-size:1.4em">{{ anlassIcons[loop.index0] }}</span>
+            <a href="{{ type.url }}">{{ type.label }}</a>
+          </h3>
           <p style="margin:0">
             <a href="{{ type.url }}" style="display:inline-flex;align-items:center;gap:0.4em;color:var(--red);font-weight:700;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:2px" aria-label="Mehr zu {{ type.label }} ansehen">
               Mehr ansehen <span aria-hidden="true">→</span>
