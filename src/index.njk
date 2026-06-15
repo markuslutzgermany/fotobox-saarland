@@ -40,12 +40,6 @@ permalink: /
 <section class="section">
   <div class="container">
     <h2 style="text-align:center">Maßgeschneidert für Geschäftskunden</h2>
-    <p class="section__lead">
-      Diese Seite richtet sich ausschließlich an Unternehmen, Gewerbetreibende, Verbände und
-      öffentliche Institutionen. Reine Privatanlässe (Hochzeiten, Geburtstage) bedienen wir
-      gezielt über die Schwesterseite
-      <a href="{{ site.sister.url }}">{{ site.sister.name }}</a> — dort ist das Feuerwehrauto USP.
-    </p>
 
     <div class="cards">
       {% for type in site.audienceTypes %}
@@ -142,20 +136,26 @@ permalink: /
     <div class="cards cards--2col">
       {% for box in site.boxes %}
         <article class="card">
-          <h3>
+          <h3 style="display:flex;align-items:center;gap:0.5em;margin-bottom:0.5rem">
+            <span aria-hidden="true" style="font-size:1.4em">
+              {%- if box.name == "Klassische Fotobox" -%}📷
+              {%- elif box.name == "Magic Mirror" -%}🪞
+              {%- elif box.name == "KI-Fotobox" -%}✨
+              {%- elif box.name == "Feuerwehrbus" -%}🚒
+              {%- endif -%}
+            </span>
             {% if box.external %}
               <a href="{{ box.url }}" rel="noopener">{{ box.name }} ↗</a>
             {% else %}
               <a href="{{ box.url }}">{{ box.name }}</a>
             {% endif %}
           </h3>
-          <p style="font-weight:700;color:var(--red);font-size:0.9rem;margin-bottom:0.5rem">{{ box.tagline }}</p>
-          <p>{{ box.summary }}</p>
-          {% if box.secondaryLink %}
-            <p style="margin-top:0.75rem;padding-top:0.75rem;border-top:1px solid var(--light);font-size:0.95rem">
-              🚒 <a href="{{ box.secondaryLink.url }}" rel="noopener" style="color:var(--red);font-weight:700">{{ box.secondaryLink.text }}</a>
-            </p>
-          {% endif %}
+          <p style="font-weight:700;color:var(--red);font-size:0.9rem;margin:0 0 1rem">{{ box.tagline }}</p>
+          <p style="margin:0">
+            <a href="{{ box.url }}" style="display:inline-flex;align-items:center;gap:0.4em;color:var(--red);font-weight:700;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:2px" aria-label="Mehr zur {{ box.name }} ansehen">
+              Mehr ansehen <span aria-hidden="true">→</span>
+            </a>
+          </p>
         </article>
       {% endfor %}
     </div>
@@ -202,111 +202,77 @@ permalink: /
 <section class="section section--alt">
   <div class="container">
     <h2 style="text-align:center">Stamm-Einsatzorte im Saarland</h2>
-    <p class="section__lead">
-      Wir kennen unsere Region — nicht aus Werbe-Broschüren, sondern aus regelmäßigem Einsatz.
-      Zehn der wichtigsten Saarländer Eventlocations, in denen Foto Lutz <strong>zuhause</strong> ist:
-    </p>
 
     <div class="cards" style="margin-top:2rem">
 
       <article class="card" style="padding:1.5rem;border:1px solid var(--light)">
         <p style="color:var(--red);font-weight:900;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin:0">Festinstallation</p>
-        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.5rem">Luminanz Saarbrücken</h3>
-        <p style="font-size:0.93rem;margin:0 0 1rem">
-          40 bis 50 Events pro Jahr über unsere fest installierte Fotobox —
-          ganzjährig im Einsatz beim Premium-Partner.
-        </p>
-        <p style="margin:0"><a href="/saarbruecken/" style="color:var(--red);font-weight:700;font-size:0.9rem">Mehr zu Saarbrücken →</a></p>
+        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.75rem">📍 Luminanz Saarbrücken</h3>
+        <p style="font-size:0.93rem;margin:0 0 1rem">40–50 Events pro Jahr · fest installiert.</p>
+        <p style="margin:0"><a href="/saarbruecken/" style="color:var(--red);font-weight:700;font-size:0.9rem;border-bottom:2px solid var(--red)">Mehr zu Saarbrücken →</a></p>
       </article>
 
       <article class="card" style="padding:1.5rem;border:1px solid var(--light)">
         <p style="color:var(--red);font-weight:900;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin:0">Seit 2012</p>
-        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.5rem">Alte Schmelz St. Ingbert</h3>
-        <p style="font-size:0.93rem;margin:0 0 1rem">
-          14 Jahre mit dem Fotoprintmodul beim Saarländischen Wirtschaftsball in der
-          Industriekathedrale — Jahr für Jahr wiedergebucht.
-        </p>
-        <p style="margin:0"><a href="/sankt-ingbert/" style="color:var(--red);font-weight:700;font-size:0.9rem">Mehr zu St. Ingbert →</a></p>
+        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.75rem">🏛️ Alte Schmelz St. Ingbert</h3>
+        <p style="font-size:0.93rem;margin:0 0 1rem">14 Jahre Saarländischer Wirtschaftsball.</p>
+        <p style="margin:0"><a href="/sankt-ingbert/" style="color:var(--red);font-weight:700;font-size:0.9rem;border-bottom:2px solid var(--red)">Mehr zu St. Ingbert →</a></p>
       </article>
 
       <article class="card" style="padding:1.5rem;border:1px solid var(--light)">
         <p style="color:var(--red);font-weight:900;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin:0">1. Bundesliga</p>
-        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.5rem">Ursapharm Arena VIP</h3>
-        <p style="font-size:0.93rem;margin:0 0 1rem">
-          Regelmäßig im Einsatz im VIP-Bereich des saarländischen Bundesligaclubs
-          SV Elversberg — Hospitality-Events und Galas.
-        </p>
-        <p style="margin:0"><a href="/neunkirchen/" style="color:var(--red);font-weight:700;font-size:0.9rem">Mehr zu Neunkirchen &amp; Elversberg →</a></p>
+        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.75rem">⚽ Ursapharm Arena VIP</h3>
+        <p style="font-size:0.93rem;margin:0 0 1rem">VIP-Bereich SV Elversberg — Hospitality + Galas.</p>
+        <p style="margin:0"><a href="/neunkirchen/" style="color:var(--red);font-weight:700;font-size:0.9rem;border-bottom:2px solid var(--red)">Mehr zu Neunkirchen &amp; Elversberg →</a></p>
       </article>
 
       <article class="card" style="padding:1.5rem;border:1px solid var(--light)">
         <p style="color:var(--red);font-weight:900;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin:0">Überregional</p>
-        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.5rem">Fashion Outlet Zweibrücken</h3>
-        <p style="font-size:0.93rem;margin:0 0 1rem">
-          Mehrfache Einsätze beim Designer-Outlet mit überregionaler Strahlkraft —
-          Marken-Events und Hospitality.
-        </p>
-        <p style="margin:0"><a href="/zweibruecken/" style="color:var(--red);font-weight:700;font-size:0.9rem">Mehr zu Zweibrücken →</a></p>
+        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.75rem">🛍️ Fashion Outlet Zweibrücken</h3>
+        <p style="font-size:0.93rem;margin:0 0 1rem">Designer-Outlet · Marken-Events.</p>
+        <p style="margin:0"><a href="/zweibruecken/" style="color:var(--red);font-weight:700;font-size:0.9rem;border-bottom:2px solid var(--red)">Mehr zu Zweibrücken →</a></p>
       </article>
 
       <article class="card" style="padding:1.5rem;border:1px solid var(--light)">
         <p style="color:var(--red);font-weight:900;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin:0">Industriekulisse</p>
-        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.5rem">Lockschuppen Dillingen</h3>
-        <p style="font-size:0.93rem;margin:0 0 1rem">
-          KI-Fotobox bei der 100-Jahr-Feier der Diakonie Saar — mit Industriearchitektur
-          als Kulisse für ein gemischtes Publikum.
-        </p>
-        <p style="margin:0"><a href="/saarlouis/" style="color:var(--red);font-weight:700;font-size:0.9rem">Mehr zu Saarlouis &amp; Dillingen →</a></p>
+        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.75rem">🏭 Lockschuppen Dillingen</h3>
+        <p style="font-size:0.93rem;margin:0 0 1rem">100-Jahr-Feier Diakonie Saar mit KI-Fotobox.</p>
+        <p style="margin:0"><a href="/saarlouis/" style="color:var(--red);font-weight:700;font-size:0.9rem;border-bottom:2px solid var(--red)">Mehr zu Saarlouis &amp; Dillingen →</a></p>
       </article>
 
       <article class="card" style="padding:1.5rem;border:1px solid var(--light)">
         <p style="color:var(--red);font-weight:900;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin:0">KI-Premiere 2026</p>
-        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.5rem">Flughafen Saarbrücken</h3>
-        <p style="font-size:0.93rem;margin:0 0 1rem">
-          KI-Fotobox bei der Neueinführung neuer Fluglinien plus SaarLB-Event 2025 —
-          Premium-Infrastruktur als Bühne.
-        </p>
-        <p style="margin:0"><a href="/saarbruecken/" style="color:var(--red);font-weight:700;font-size:0.9rem">Mehr zu Saarbrücken →</a></p>
+        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.75rem">✈️ Flughafen Saarbrücken</h3>
+        <p style="font-size:0.93rem;margin:0 0 1rem">Neue Fluglinien + SaarLB-Event 2025.</p>
+        <p style="margin:0"><a href="/saarbruecken/" style="color:var(--red);font-weight:700;font-size:0.9rem;border-bottom:2px solid var(--red)">Mehr zu Saarbrücken →</a></p>
       </article>
 
       <article class="card" style="padding:1.5rem;border:1px solid var(--light)">
         <p style="color:var(--red);font-weight:900;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin:0">Seit 2012</p>
-        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.5rem">Saarlandhalle Saarbrücken</h3>
-        <p style="font-size:0.93rem;margin:0 0 1rem">
-          14 Jahre durchgehend beim Neujahrsempfang der Ministerpräsidentin —
-          Foto Lutz beim politisch wichtigsten Termin des Saarlandes.
-        </p>
-        <p style="margin:0"><a href="/saarbruecken/" style="color:var(--red);font-weight:700;font-size:0.9rem">Mehr zu Saarbrücken →</a></p>
+        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.75rem">🏛️ Saarlandhalle Saarbrücken</h3>
+        <p style="font-size:0.93rem;margin:0 0 1rem">14 Jahre Neujahrsempfang Ministerpräsidentin.</p>
+        <p style="margin:0"><a href="/saarbruecken/" style="color:var(--red);font-weight:700;font-size:0.9rem;border-bottom:2px solid var(--red)">Mehr zu Saarbrücken →</a></p>
       </article>
 
       <article class="card" style="padding:1.5rem;border:1px solid var(--light)">
         <p style="color:var(--red);font-weight:900;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin:0">Dinner-Theater</p>
-        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.5rem">Kunz Theatre Saarbrücken</h3>
-        <p style="font-size:0.93rem;margin:0 0 1rem">
-          Klassik-Fotobox bei drei Premium-Kunden — Saarland Versicherung,
-          Sparkassenverband Saar und Scheer Gruppe.
-        </p>
-        <p style="margin:0"><a href="/saarbruecken/" style="color:var(--red);font-weight:700;font-size:0.9rem">Mehr zu Saarbrücken →</a></p>
+        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.75rem">🎭 Kunz Theatre Saarbrücken</h3>
+        <p style="font-size:0.93rem;margin:0 0 1rem">SV Saarland · Sparkassenverband · Scheer.</p>
+        <p style="margin:0"><a href="/saarbruecken/" style="color:var(--red);font-weight:700;font-size:0.9rem;border-bottom:2px solid var(--red)">Mehr zu Saarbrücken →</a></p>
       </article>
 
       <article class="card" style="padding:1.5rem;border:1px solid var(--light)">
         <p style="color:var(--red);font-weight:900;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin:0">1.000 Gäste · jährlich</p>
-        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.5rem">E-Werk Saarbrücken</h3>
-        <p style="font-size:0.93rem;margin:0 0 1rem">
-          Klassik-Fotobox mit Greenscreen-Setup beim Max-Ophüls-Filmfestival und
-          der jährlichen Herweck-Eventparty — je rund 1.000 Gäste.
-        </p>
-        <p style="margin:0"><a href="/saarbruecken/" style="color:var(--red);font-weight:700;font-size:0.9rem">Mehr zu Saarbrücken →</a></p>
+        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.75rem">🎬 E-Werk Saarbrücken</h3>
+        <p style="font-size:0.93rem;margin:0 0 1rem">Max-Ophüls-Festival + Herweck-Eventparty.</p>
+        <p style="margin:0"><a href="/saarbruecken/" style="color:var(--red);font-weight:700;font-size:0.9rem;border-bottom:2px solid var(--red)">Mehr zu Saarbrücken →</a></p>
       </article>
 
       <article class="card" style="padding:1.5rem;border:1px solid var(--light)">
         <p style="color:var(--red);font-weight:900;font-size:0.78rem;text-transform:uppercase;letter-spacing:0.05em;margin:0">Dual-Mode KI</p>
-        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.5rem">Stadthalle Dillingen</h3>
-        <p style="font-size:0.93rem;margin:0 0 1rem">
-          KI-Box im Dual-Mode beim energis-25-Jahre-Sommerfest — Gäste wählen
-          frei zwischen KI-Verwandlung und klassischem Foto.
-        </p>
-        <p style="margin:0"><a href="/saarlouis/" style="color:var(--red);font-weight:700;font-size:0.9rem">Mehr zu Saarlouis &amp; Dillingen →</a></p>
+        <h3 style="font-size:1.1rem;margin:0.3rem 0 0.75rem">⚡ Stadthalle Dillingen</h3>
+        <p style="font-size:0.93rem;margin:0 0 1rem">energis 25 Jahre · KI im Dual-Mode.</p>
+        <p style="margin:0"><a href="/saarlouis/" style="color:var(--red);font-weight:700;font-size:0.9rem;border-bottom:2px solid var(--red)">Mehr zu Saarlouis &amp; Dillingen →</a></p>
       </article>
 
     </div>
@@ -322,12 +288,17 @@ permalink: /
 <section class="section">
   <div class="container">
     <h2 style="text-align:center">Warum Foto Lutz?</h2>
-    <p class="section__lead">Was uns von austauschbaren Fotobox-Anbietern unterscheidet.</p>
+
+    {# Icon-Map für die 19 USPs in der Reihenfolge von site.usps. Reihenfolge anpassen, wenn USPs neu sortiert werden. #}
+    {% set uspIcons = ['🏆','🎓','🎉','📈','📷','🔒','📊','🎨','🖨️','👆','🌿','✨','💡','⚡','📞','🛡️','📝','🎭','🎯'] %}
 
     <div class="cards">
       {% for usp in site.usps %}
         <article class="card">
-          <h3 style="font-size:1.1rem">{{ usp.title }}</h3>
+          <h3 style="font-size:1.1rem;display:flex;align-items:center;gap:0.5em">
+            <span aria-hidden="true" style="font-size:1.4em">{{ uspIcons[loop.index0] }}</span>
+            {{ usp.title }}
+          </h3>
           <p style="font-size:0.95rem">{{ usp.text }}</p>
         </article>
       {% endfor %}
