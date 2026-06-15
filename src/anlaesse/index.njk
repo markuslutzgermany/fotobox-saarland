@@ -9,17 +9,16 @@ permalink: /anlaesse/
   <div class="container">
 
     <h1 style="text-align:center">Anlässe für Ihre Fotobox-Buchung</h1>
-    <p class="section__lead">
-      Diese fünf Eventarten machen den Großteil unserer B2B-Buchungen aus. Für jede haben wir aus
-      14 Jahren Praxis einen passenden Setup-Vorschlag.
-    </p>
 
     <div class="cards">
       {% for type in site.audienceTypes %}
         <article class="card" style="padding:2rem">
-          <h2 style="margin-top:0"><a href="{{ type.url }}">{{ type.label }}</a></h2>
-          <p>Mehr erfahren zu typischen Setups, empfohlenen Paketen und Beispielen aus unserer Praxis.</p>
-          <p><a href="{{ type.url }}">Zum Anlass →</a></p>
+          <h2 style="margin:0 0 1rem"><a href="{{ type.url }}">{{ type.label }}</a></h2>
+          <p style="margin:0">
+            <a href="{{ type.url }}" style="display:inline-flex;align-items:center;gap:0.4em;color:var(--red);font-weight:700;text-decoration:none;border-bottom:2px solid var(--red);padding-bottom:2px" aria-label="Mehr zu {{ type.label }} ansehen">
+              Mehr ansehen <span aria-hidden="true">→</span>
+            </a>
+          </p>
         </article>
       {% endfor %}
     </div>
