@@ -24,9 +24,9 @@
     "name": "Feuerwehr-Fotobus Saarland",
     "url": "https://fotobus.saarland",
     "eventabendPrice": 990,
-    "eventabendLabel": "990 € + MwSt. (Eventabend, 4 h — ideal für Hochzeit, Geburtstag, Privatfeier)",
+    "eventabendLabel": "990 € + MwSt. (Eventabend, 4 h — ideal für Firmenfeier und kompakte Events)",
     "priceRange": "ab 990 € (Eventabend, 4 h) bis 1.590 € (Tagesevent, 8 h)",
-    "usp": "Eye-Catcher-Outdoor-Events und Premium-Hochzeiten",
+    "usp": "Outdoor-Eyecatcher-Events",
     "since": 2015,
     "b2bPriceDay": 1590,
     "b2bPriceLabel": "1.590 € + MwSt. / Tag"
@@ -326,7 +326,7 @@
       "slug": "feuerwehrbus",
       "name": "Feuerwehrbus",
       "tagline": "Outdoor-Eyecatcher",
-      "summary": "Eyecatcher + Team-Building + Profi-Fotobox-Technik im historischen Feuerwehrauto. Ab 990 € für 4-Stunden-Eventabende (Hochzeit, Geburtstag, Privatfeier) — 1.590 € für 8-Stunden-Tagesevents (Tag der offenen Tür, Sommerfest, Marken-Events). Schließt die Lücke zwischen Klassik-Premium und KI-Tagesevent.",
+      "summary": "Eyecatcher + Team-Building + Profi-Fotobox-Technik im historischen Feuerwehrauto. Ab 990 € für 4-Stunden-Eventabende — 1.590 € für 8-Stunden-Tagesevents (Tag der offenen Tür, Sommerfest, Marken-Events). Schließt die Lücke zwischen Klassik-Premium und KI-Tagesevent.",
       "url": "/die-fotoboxen/feuerwehrbus/",
       "external": false,
       "secondaryLink": {
