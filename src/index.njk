@@ -166,6 +166,32 @@ permalink: /
   </div>
 </section>
 
+<section class="section section--alt">
+  <div class="container">
+    <h2 style="text-align:center">Drei Pakete für Ihren Eventbedarf</h2>
+    <p class="section__lead">
+      Vom schlanken Starter bis zum Fullservice mit Druck-Flatrate. Detaillierte Auflistung auf der
+      <a href="/preise/">Preise-Seite</a>.
+    </p>
+
+    <div class="cards">
+      {% for pkg in site.packages %}
+        <article class="card" {% if pkg.highlight %}style="border:2px solid var(--red)"{% endif %}>
+          {% if pkg.highlight %}<p style="color:var(--red);font-weight:900;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem">★ {{ pkg.tagline }}</p>{% else %}<p style="color:var(--grey);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem">{{ pkg.tagline }}</p>{% endif %}
+          <h3>{{ pkg.name }}</h3>
+          <p style="font-size:1.5rem;font-weight:900;color:var(--dark);margin:0.5rem 0">{{ pkg.price }} €<small style="font-size:0.7rem;color:var(--grey);font-weight:400">&nbsp;{{ pkg.vatNote }}</small></p>
+          <p style="font-size:0.9rem;color:var(--grey)">{{ pkg.features[0] }}</p>
+          <p style="margin-top:1rem"><a href="/preise/#{{ pkg.tagline | slug }}">Details →</a></p>
+        </article>
+      {% endfor %}
+    </div>
+
+    <p style="margin-top:2rem;text-align:center">
+      <a class="btn btn--primary" href="/preise/">Alle Pakete im Detail</a>
+    </p>
+  </div>
+</section>
+
 <!-- Schwester-Marken-Banner: prominenter Link zu fotobus.saarland (eigene Outdoor-Variante mit eigener Story) -->
 <section class="section" style="background:linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%);color:white;padding:4rem 0">
   <div class="container">
@@ -307,32 +333,6 @@ permalink: /
         </article>
       {% endfor %}
     </div>
-  </div>
-</section>
-
-<section class="section section--alt">
-  <div class="container">
-    <h2 style="text-align:center">Drei Pakete für Ihren Eventbedarf</h2>
-    <p class="section__lead">
-      Vom schlanken Starter bis zum Fullservice mit Druck-Flatrate. Detaillierte Auflistung auf der
-      <a href="/preise/">Preise-Seite</a>.
-    </p>
-
-    <div class="cards">
-      {% for pkg in site.packages %}
-        <article class="card" {% if pkg.highlight %}style="border:2px solid var(--red)"{% endif %}>
-          {% if pkg.highlight %}<p style="color:var(--red);font-weight:900;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem">★ {{ pkg.tagline }}</p>{% else %}<p style="color:var(--grey);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.5rem">{{ pkg.tagline }}</p>{% endif %}
-          <h3>{{ pkg.name }}</h3>
-          <p style="font-size:1.5rem;font-weight:900;color:var(--dark);margin:0.5rem 0">{{ pkg.price }} €<small style="font-size:0.7rem;color:var(--grey);font-weight:400">&nbsp;{{ pkg.vatNote }}</small></p>
-          <p style="font-size:0.9rem;color:var(--grey)">{{ pkg.features[0] }}</p>
-          <p style="margin-top:1rem"><a href="/preise/#{{ pkg.tagline | slug }}">Details →</a></p>
-        </article>
-      {% endfor %}
-    </div>
-
-    <p style="margin-top:2rem;text-align:center">
-      <a class="btn btn--primary" href="/preise/">Alle Pakete im Detail</a>
-    </p>
   </div>
 </section>
 
