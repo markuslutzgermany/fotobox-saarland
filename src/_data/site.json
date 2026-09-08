@@ -268,12 +268,17 @@
         "Auf- und Abbauzeiten des Systems",
         "Anfahrt in Saarbrücken inklusive — weitere Distanzen auf Anfrage"
       ],
-      "highlight": true
+      "highlight": true,
+      "timeInfo": {
+        "headline": "~8 h Gesamt-Einsatz für Sie",
+        "detail": "5 h Eventzeit + ~3 h für An-/Abfahrt, Auf-/Abbau und event-spezifisches Setup.",
+        "closing": "Alles im Preis enthalten."
+      }
     },
     {
       "name": "BUSINESS — PREMIUM",
       "tagline": "Fullservice",
-      "price": 1199,
+      "price": 1099,
       "currency": "EUR",
       "vatNote": "+ 19 % MwSt.",
       "features": [
@@ -289,7 +294,12 @@
         "Individuelle Foto-Galerie für jeden Gast — Zugriff nur per persönlichem PIN auf dem Druck. Keine kollektive Galerie, kein Datenleck-Risiko (DSGVO-konform)",
         "Anfahrt in Saarbrücken inklusive — weitere Distanzen auf Anfrage"
       ],
-      "highlight": false
+      "highlight": false,
+      "timeInfo": {
+        "headline": "~11 h Gesamt-Einsatz für Sie",
+        "detail": "8 h Eventzeit + ~3 h für An-/Abfahrt, Auf-/Abbau und event-spezifisches Setup.",
+        "closing": "Alles im Preis enthalten."
+      }
     }
   ],
   "packageDisclaimer": "Unsere gewerblichen Fotoboxen und Angebote richten sich ausschließlich an Unternehmen, Gewerbetreibende, Verbände sowie öffentliche Institutionen.",

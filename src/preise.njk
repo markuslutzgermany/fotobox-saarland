@@ -1,7 +1,7 @@
 ---
 layout: layout-base.njk
-title: Fotobox Saarland Preise · 649 € · 899 € · 1.199 € — B2B-Pakete
-description: B2B-Fotobox-Pakete im Saarland · Basic 649 €, Bestseller 899 €, Premium 1.199 € — Spiegelreflex, Studio-Blitz, Profi-Druck, DSGVO-Galerie. Magic Mirror + KI auf Anfrage.
+title: Fotobox Saarland Preise · 649 € · 899 € · 1.099 € — B2B-Pakete
+description: B2B-Fotobox-Pakete im Saarland · Basic 649 €, Bestseller 899 €, Premium 1.099 € — Spiegelreflex, Studio-Blitz, Profi-Druck, DSGVO-Galerie. Magic Mirror + KI auf Anfrage.
 permalink: /preise/
 ---
 
@@ -40,6 +40,14 @@ permalink: /preise/
           {% endfor %}
         </ul>
 
+        {% if pkg.timeInfo %}
+          <div style="margin-top:1.5rem;padding:1rem 1.25rem;border-left:3px solid var(--red);background:rgba(227,6,19,0.05);border-radius:var(--radius)">
+            <p style="margin:0;font-size:0.95rem">
+              🕐 <strong>{{ pkg.timeInfo.headline }}</strong> — {{ pkg.timeInfo.detail }} <strong>{{ pkg.timeInfo.closing }}</strong>
+            </p>
+          </div>
+        {% endif %}
+
         <p style="margin-top:1.5rem">
           <a class="btn {% if pkg.highlight %}btn--primary{% else %}btn--ghost{% endif %}"
              href="/kontakt/?paket={{ pkg.name | slug }}"
@@ -64,8 +72,8 @@ permalink: /preise/
     <h2 style="margin-top:3rem">Sondersetups &amp; Custom-Anfragen</h2>
     <p>
       <strong><a href="/die-fotoboxen/magic-mirror/">Magic Mirror</a></strong> — Premium-Linie mit
-      Mitarbeiter-Betreuung, Aufpreis 250 € gegenüber dem Klassik-Paket
-      (Bestseller-Variante ab 1.149 €, Premium-Variante ab 1.449 € + MwSt.).
+      Mitarbeiter-Betreuung, Aufpreis 200 € gegenüber dem Klassik-Paket
+      (Bestseller-Variante ab 1.099 €, Premium-Variante ab 1.299 € + MwSt.).
     </p>
     <p>
       <strong><a href="/die-fotoboxen/feuerwehrbus/">Feuerwehrbus</a></strong> — Outdoor-Eyecatcher
