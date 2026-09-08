@@ -26,7 +26,7 @@
     "eventabendPrice": 750,
     "eventabendLabel": "750 € + MwSt. (Schnupperpaket, 3 h — Einstieg, nur im Umkreis 30 km um Saarbrücken)",
     "priceRange": "ab 750 € (Schnupperpaket, 3 h) bis 1.399 € (Tagesevent, 8 h)",
-    "usp": "Outdoor-Eyecatcher-Events",
+    "usp": "Outdoor-Eyecatcher-Events und Premium-Hochzeiten",
     "since": 2015,
     "b2bPriceDay": 1399,
     "b2bPriceLabel": "ab 750 € + MwSt. (Schnupperpaket, 3 h) bis 1.399 € (Tagesevent, 8 h)"
@@ -142,6 +142,10 @@
     {
       "label": "Produkt-Launch",
       "url": "/anlaesse/produkt-launch/"
+    },
+    {
+      "label": "Hochzeit & Privatfeier",
+      "url": "/anlaesse/hochzeit/"
     }
   ],
   "usps": [
