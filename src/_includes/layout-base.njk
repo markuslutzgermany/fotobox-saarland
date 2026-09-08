@@ -48,6 +48,31 @@
   {# Eigenes CSS #}
   <link rel="stylesheet" href="/css/main.css">
 
+  {% if site.googleAds.id %}
+  {# Google Consent Mode v2 — Default: alles abgelehnt, bis der Cookie-Banner
+     eine Einwilligung einholt. Muss vor dem eigentlichen Google-Tag stehen.
+     Nur aktiv, wenn site.googleAds.id gesetzt ist (siehe site.json). #}
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('consent', 'default', {
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'wait_for_update': 500
+    });
+  </script>
+
+  {# Google Tag (gtag.js) — für Google Ads Conversion-Tracking.
+     Lädt technisch immer, sendet aber laut Consent Mode oben erst Daten,
+     nachdem im Cookie-Banner zugestimmt wurde. #}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.googleAds.id }}"></script>
+  <script>
+    gtag('js', new Date());
+    gtag('config', '{{ site.googleAds.id }}');
+  </script>
+  {% endif %}
+
   {# RSS-Feed-Autodiscovery für Browser + Feedreader #}
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }} Blog" href="/feed.xml">
 
@@ -66,6 +91,7 @@
   </main>
 
   {% include "footer.njk" %}
+  {% include "consent-banner.njk" %}
 
   {# WhatsApp-Floating-Button — Dachmarken-Konsistenz mit fotobus.saarland.
      Pre-filled Text ist B2B-spezifisch für fotobox (Firmenevent). #}

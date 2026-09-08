@@ -52,6 +52,9 @@
         <li><a href="/datenschutz/">Datenschutz</a></li>
         <li><a href="/agb/">AGB</a></li>
         <li><a href="/avv/">AVV (B2B)</a></li>
+        {% if site.googleAds.id %}
+        <li><a href="#" onclick="window.fotoboxReopenConsentBanner &amp;&amp; window.fotoboxReopenConsentBanner(); return false;">Cookie-Einstellungen</a></li>
+        {% endif %}
       </ul>
     </div>
 

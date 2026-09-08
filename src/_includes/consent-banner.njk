@@ -1,0 +1,68 @@
+{% if site.googleAds.id %}
+{# Einfacher Cookie-Banner nur für das Google-Ads-Conversion-Tag.
+   Erscheint nur, wenn site.googleAds.id gesetzt ist. Speichert die Wahl
+   in localStorage, damit er nicht bei jedem Seitenaufruf neu erscheint.
+   "Cookie-Einstellungen" im Footer setzt den Banner zurück (siehe footer.njk). #}
+<div id="consent-banner" class="consent-banner" hidden>
+  <div class="consent-banner__inner">
+    <p class="consent-banner__text">
+      Wir nutzen Google Ads Conversion-Tracking, um zu sehen, ob unsere Anzeigen
+      zu Anfragen führen. Dabei werden Cookies gesetzt. Mehr dazu in unserer
+      <a href="/datenschutz/#abschnitt-6">Datenschutzerklärung</a>.
+    </p>
+    <div class="consent-banner__actions">
+      <button type="button" id="consent-decline" class="btn btn--ghost-dark">Ablehnen</button>
+      <button type="button" id="consent-accept" class="btn btn--primary">Akzeptieren</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  var STORAGE_KEY = 'fotobox-consent-ads';
+  var banner = document.getElementById('consent-banner');
+  if (!banner) return;
+
+  function grantConsent() {
+    if (typeof gtag === 'function') {
+      gtag('consent', 'update', {
+        'ad_storage': 'granted',
+        'ad_user_data': 'granted',
+        'ad_personalization': 'granted'
+      });
+    }
+  }
+
+  var choice = null;
+  try { choice = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+
+  if (choice === 'granted') {
+    grantConsent();
+  } else if (choice !== 'denied') {
+    banner.hidden = false;
+  }
+
+  var acceptBtn = document.getElementById('consent-accept');
+  var declineBtn = document.getElementById('consent-decline');
+
+  if (acceptBtn) {
+    acceptBtn.addEventListener('click', function () {
+      grantConsent();
+      try { localStorage.setItem(STORAGE_KEY, 'granted'); } catch (e) {}
+      banner.hidden = true;
+    });
+  }
+  if (declineBtn) {
+    declineBtn.addEventListener('click', function () {
+      try { localStorage.setItem(STORAGE_KEY, 'denied'); } catch (e) {}
+      banner.hidden = true;
+    });
+  }
+
+  // Vom Footer-Link "Cookie-Einstellungen" aufgerufen, um den Banner erneut zu zeigen
+  window.fotoboxReopenConsentBanner = function () {
+    banner.hidden = false;
+  };
+})();
+</script>
+{% endif %}

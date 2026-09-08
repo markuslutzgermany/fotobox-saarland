@@ -338,5 +338,10 @@
         "text": "Feuerwehr-Fotobus mieten ab 750 € auf fotobus.saarland →"
       }
     }
-  ]
+  ],
+  "googleAds": {
+    "id": "",
+    "conversionLabel": "",
+    "_hinweis": "Von Markus auszufuellen, sobald die Google-Ads-Kampagne + Conversion-Aktion angelegt ist. id = z.B. AW-123456789, conversionLabel = z.B. AbCdEfGhIjK. Solange id leer ist, wird kein Google-Skript und kein Cookie-Banner ausgeliefert."
+  }
 }

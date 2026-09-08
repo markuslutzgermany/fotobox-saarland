@@ -775,3 +775,46 @@ p { margin: 0 0 var(--space-3); }
   padding-top: 1.5rem;
   border-top: 1px solid var(--light);
 }
+
+/* Cookie-Consent-Banner (Google Ads Conversion-Tracking) */
+.consent-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  background: var(--white);
+  border-top: 1px solid var(--light);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-4);
+}
+.consent-banner__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+.consent-banner__text {
+  margin: 0;
+  color: var(--dark);
+  font-size: 0.92rem;
+  max-width: 62ch;
+  flex: 1 1 320px;
+}
+.consent-banner__actions {
+  display: flex;
+  gap: var(--space-2);
+  flex: 0 0 auto;
+}
+.btn--ghost-dark {
+  background: var(--white);
+  color: var(--dark);
+  border: 2px solid var(--grey-light);
+}
+.btn--ghost-dark:hover {
+  border-color: var(--dark);
+  color: var(--dark);
+}

@@ -26,3 +26,13 @@ draft: true
 
   </div>
 </section>
+
+{% if site.googleAds.id and site.googleAds.conversionLabel %}
+{# Google Ads Conversion-Event — zaehlt nur, wenn im Cookie-Banner zugestimmt wurde
+   (Consent Mode haelt das Signal sonst zurueck). #}
+<script>
+  gtag('event', 'conversion', {
+    'send_to': '{{ site.googleAds.id }}/{{ site.googleAds.conversionLabel }}'
+  });
+</script>
+{% endif %}
