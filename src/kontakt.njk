@@ -113,3 +113,67 @@ permalink: /kontakt/
     border-color: var(--red);
   }
 </style>
+
+<script>
+(function () {
+  // Fuellt das Anfrageformular anhand von Query-Parametern vor, die von
+  // "Anfrage senden"-Buttons auf anderen Seiten mitgegeben werden
+  // (z.B. /kontakt/?anlass=hochzeit, ?box=klassik, ?stadt=saarbruecken, ?paket=business-bestseller, ?service=fotoprintmodul).
+  var params = new URLSearchParams(window.location.search);
+
+  var anlassMap = {
+    "firmenfeier": "Firmenfeier",
+    "kundenevent": "Kundenevent",
+    "messe": "Messe",
+    "tag-der-offenen-tuer": "Tag der offenen T\u00fcr",
+    "produkt-launch": "Produkt-Launch",
+    "hochzeit": "Hochzeit & Privatfeier"
+  };
+  var boxMap = {
+    "klassik": "Klassik-Fotobox",
+    "magic-mirror": "Magic Mirror",
+    "ki-box": "KI-Fotobox",
+    "feuerwehrbus": "Feuerwehrbus"
+  };
+  var stadtMap = {
+    "saarbruecken": "Saarbr\u00fccken",
+    "sankt-ingbert": "Sankt Ingbert",
+    "neunkirchen": "Neunkirchen",
+    "zweibruecken": "Zweibr\u00fccken",
+    "saarlouis": "Saarlouis",
+    "homburg": "Homburg",
+    "voelklingen": "V\u00f6lklingen"
+  };
+  var paketMap = {
+    "business-basic": "BUSINESS \u2013 BASIC",
+    "business-bestseller": "BUSINESS \u2013 BESTSELLER",
+    "business-premium": "BUSINESS \u2013 PREMIUM"
+  };
+  var serviceMap = {
+    "fotoprintmodul": "Fotoprintmodul"
+  };
+
+  var anlass = params.get("anlass");
+  if (anlass && anlassMap[anlass]) {
+    var select = document.getElementById("event_type");
+    if (select) select.value = anlassMap[anlass];
+  }
+
+  var notes = [];
+  var box = params.get("box");
+  if (box && boxMap[box]) notes.push("Interesse an: " + boxMap[box]);
+  var stadt = params.get("stadt");
+  if (stadt && stadtMap[stadt]) notes.push("Ort der Veranstaltung: " + stadtMap[stadt]);
+  var paket = params.get("paket");
+  if (paket && paketMap[paket]) notes.push("Interesse am Paket: " + paketMap[paket]);
+  var service = params.get("service");
+  if (service && serviceMap[service]) notes.push("Interesse an: " + serviceMap[service]);
+
+  if (notes.length) {
+    var msg = document.getElementById("message");
+    if (msg && !msg.value) {
+      msg.value = notes.join("\n") + "\n\n";
+    }
+  }
+})();
+</script>
