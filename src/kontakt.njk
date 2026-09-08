@@ -21,6 +21,8 @@ permalink: /kontakt/
           method="POST"
           class="anfrage-form">
 
+      <input type="hidden" name="_next" value="{{ site.url }}/danke/">
+
       <div class="form-row">
         <label for="company">Firma (falls zutreffend)</label>
         <input id="company" name="company" type="text" autocomplete="organization">
