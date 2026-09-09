@@ -82,6 +82,13 @@ permalink: /anlaesse/messe/
       Standfläche jeweils individuell sind. Bei Messen mit großem Publikum:
       <strong>BUSINESS — Premium</strong> mit Druckflatrate, da Drucke sehr zügig durchlaufen.
     </p>
+    {% for pkg in site.packages %}{% if pkg.name == "BUSINESS — PREMIUM" and pkg.timeInfo %}
+    <div style="margin-top:1rem;padding:1rem 1.25rem;border-left:3px solid var(--red);background:rgba(227,6,19,0.05);border-radius:var(--radius)">
+      <p style="margin:0;font-size:0.95rem">
+        🕐 <strong>{{ pkg.timeInfo.headline }}</strong> — {{ pkg.timeInfo.detail }} <strong>{{ pkg.timeInfo.closing }}</strong>
+      </p>
+    </div>
+    {% endif %}{% endfor %}
 
     <p style="margin-top:2rem">
       <a class="btn btn--primary" href="/kontakt/?anlass=messe">Messe-Anfrage senden</a>

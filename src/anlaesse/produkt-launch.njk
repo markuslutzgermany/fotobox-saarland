@@ -31,6 +31,13 @@ permalink: /anlaesse/produkt-launch/
       <li>DTB-Aufbau für den Sofortprint mit Ihre Produkt-Message, Launch-Datum, ggf. QR-Code (nach Ihrer Vorgabe)</li>
       <li>Optional: Greenscreen-KI mit Produktintegration (seit 2019 in unserem Stammgeschäft)</li>
     </ul>
+    {% for pkg in site.packages %}{% if pkg.name == "BUSINESS — PREMIUM" and pkg.timeInfo %}
+    <div style="margin-top:1rem;padding:1rem 1.25rem;border-left:3px solid var(--red);background:rgba(227,6,19,0.05);border-radius:var(--radius)">
+      <p style="margin:0;font-size:0.95rem">
+        🕐 <strong>{{ pkg.timeInfo.headline }}</strong> — {{ pkg.timeInfo.detail }} <strong>{{ pkg.timeInfo.closing }}</strong>
+      </p>
+    </div>
+    {% endif %}{% endfor %}
 
     <h2>Social-Media-Faktor</h2>
     <p>
