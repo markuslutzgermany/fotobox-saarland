@@ -243,11 +243,12 @@
         "Requisitentisch mit Husse — in jedem Paket enthalten",
         "Individuelle Foto-Galerie für jeden Gast — Zugriff nur per persönlichem PIN auf dem Druck. Keine kollektive Galerie, kein Datenleck-Risiko (DSGVO-konform)",
         "TeamViewer-Online-Support mit Router-Verbindung direkt zur Fotobox — sofortige Hilfe bei Fragen, kein Wartezeitstress (besonders wichtig im Selfservice-Setup)",
-        "Nutzungsdauer: ein Eventtag/Abend",
+        "Nutzungsdauer: bis zu einem ganzen Tag — darf auch über Nacht stehen bleiben",
         "Lieferung am Eventtag, Abholung am Folgetag — Auf- und Abbau durch unser Personal",
         "Anfahrt in Saarbrücken inklusive — weitere Distanzen auf Anfrage"
       ],
-      "highlight": false
+      "highlight": false,
+      "topInfo": "Einsatzzeit: bis zu einem ganzen Tag, so lange Sie möchten — wird bis in die Nacht gefeiert, darf die Fotobox auch über Nacht stehen bleiben."
     },
     {
       "name": "BUSINESS — BESTSELLER",
