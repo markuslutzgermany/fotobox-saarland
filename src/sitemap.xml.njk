@@ -5,11 +5,12 @@ eleventyExcludeFromCollections: true
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {%- for page in collections.all %}
-{%- if page.data.permalink !== false %}
+{%- if page.data.permalink !== false and not page.data.draft and not page.data.noindex %}
   <url>
     <loc>https://fotobox.saarland{{ page.url }}</loc>
+    {%- if page.data.date %}
     <lastmod>{{ page.date.toISOString().split('T')[0] }}</lastmod>
-    <changefreq>weekly</changefreq>
+    {%- endif %}
   </url>
 {%- endif %}
 {%- endfor %}

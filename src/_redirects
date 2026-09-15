@@ -58,6 +58,12 @@
 /fotobox-buchen-geschaeftskunde/  /kontakt/  301
 
 
+# ----- Alte Privatkunden-Buchungsseite (GSC 404, Stand 2026-09-15) -----
+
+/fotobox-buchen-privatkunde/  /kontakt/  301
+/fotobox-buchen-privatkunde   /kontakt/  301
+
+
 # ----- Bestehende Top-URLs mit identischem Pfad -----
 # Brauchen KEINEN Redirect — Eleventy gibt sie unter gleicher URL aus:
 #   /                                ✓ identisch
