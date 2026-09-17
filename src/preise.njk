@@ -82,10 +82,14 @@ permalink: /preise/
 
     <h2 style="margin-top:3rem">Unsere Pakete</h2>
 
+    {# 2x2-Raster: Privatpaket + die drei Business-Pakete. Unter 700 px stapelt
+       .cards--2col automatisch auf eine Spalte. #}
+    <div class="cards cards--2col" style="align-items:start;margin-top:1.5rem">
+
     {# PRIVAT — DIGITAL: einziges Paket für Privatkunden, deshalb hier fest und
        nicht in site.packages (die Liste wird auf Startseite + B2B-Seiten ausgespielt). #}
     <article class="card" id="privat-digital"
-             style="margin-bottom:2rem; padding:2rem; border:2px solid var(--red); box-shadow:var(--shadow-lg)">
+             style="padding:1.75rem; border:2px solid var(--red); box-shadow:var(--shadow-lg)">
 
       <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:1rem;margin-bottom:1rem">
         <div>
@@ -96,7 +100,7 @@ permalink: /preise/
           </p>
         </div>
         <div style="text-align:right">
-          <p style="font-size:2.5rem;font-weight:900;color:var(--dark);margin:0;line-height:1">399 €</p>
+          <p style="font-size:2.1rem;font-weight:900;color:var(--dark);margin:0;line-height:1">399 €</p>
           <p style="font-size:0.85rem;color:var(--grey);margin:0">+ 19 % MwSt.</p>
         </div>
       </div>
@@ -129,7 +133,7 @@ permalink: /preise/
 
     {% for pkg in site.packages %}
       <article class="card" id="{{ pkg.tagline | slug }}"
-               style="margin-bottom:2rem; padding:2rem; {% if pkg.highlight %}border:2px solid var(--red); box-shadow:var(--shadow-lg){% endif %}">
+               style="padding:1.75rem; {% if pkg.highlight %}border:2px solid var(--red); box-shadow:var(--shadow-lg){% endif %}">
 
         <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:1rem;margin-bottom:1rem">
           <div>
@@ -142,7 +146,7 @@ permalink: /preise/
             {% endif %}
           </div>
           <div style="text-align:right">
-            <p style="font-size:2.5rem;font-weight:900;color:var(--dark);margin:0;line-height:1">
+            <p style="font-size:2.1rem;font-weight:900;color:var(--dark);margin:0;line-height:1">
               {{ pkg.price }} €
             </p>
             <p style="font-size:0.85rem;color:var(--grey);margin:0">{{ pkg.vatNote }}</p>
@@ -175,6 +179,8 @@ permalink: /preise/
 
       </article>
     {% endfor %}
+
+    </div>{# /cards--2col #}
 
     {# Aufpreis-Block — gilt für alle Business-Pakete + Sondersetups #}
     <div style="background:var(--light);padding:1.75rem 2rem;border-radius:var(--radius);border-left:4px solid var(--red);margin:2rem 0">
