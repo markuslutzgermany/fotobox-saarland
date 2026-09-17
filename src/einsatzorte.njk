@@ -1,0 +1,110 @@
+---
+layout: layout-base.njk
+title: Einsatzorte — Fotobox mieten im Saarland
+description: "Fotobox mieten im ganzen Saarland: Saarbrücken, St. Ingbert, Neunkirchen, Zweibrücken, Saarlouis, Homburg und Völklingen — Anfahrt ab Saarbrücken, erste 10 km inklusive."
+permalink: /einsatzorte/
+---
+
+<section class="section">
+  <div class="container" style="max-width:1000px">
+
+    <h1 style="text-align:center">Fotobox mieten im Saarland — unsere Einsatzorte</h1>
+    <p class="section__lead">
+      Unser Stammsitz ist Saarbrücken, im Einsatz sind wir im ganzen Saarland und darüber hinaus.
+      Für jede Stadt finden Sie hier die passenden Eventlocations, typische Anlässe und den Weg zur
+      Anfrage. Die ersten 10 Kilometer Anfahrt sind in jedem Paket enthalten.
+    </p>
+
+    <div class="cards">
+
+      <article class="card">
+        <h2 style="font-size:1.15rem;margin:0 0 0.5rem">📍 <a href="/saarbruecken/">Fotobox Saarbrücken</a></h2>
+        <p style="margin:0 0 1rem;color:var(--grey);font-size:0.93rem">
+          Stammsitz in der Metzer Straße, Festinstallation in der Luminanz. Im Einsatz in
+          Congresshalle, E-Werk, Saarlandhalle, Kunz Theatre und am Flughafen.
+        </p>
+        <p style="margin:0"><a href="/saarbruecken/" style="color:var(--red);font-weight:700;font-size:0.9rem;border-bottom:2px solid var(--red)">Mehr zu Saarbrücken →</a></p>
+      </article>
+
+      <article class="card">
+        <h2 style="font-size:1.15rem;margin:0 0 0.5rem">🏛️ <a href="/sankt-ingbert/">Fotobox St. Ingbert</a></h2>
+        <p style="margin:0 0 1rem;color:var(--grey);font-size:0.93rem">
+          Alte Schmelz als Industriekathedrale für Bälle und Galas — seit 2012 beim Saarländischen
+          Wirtschaftsball im Einsatz. Anfahrt rund 15 Minuten.
+        </p>
+        <p style="margin:0"><a href="/sankt-ingbert/" style="color:var(--red);font-weight:700;font-size:0.9rem;border-bottom:2px solid var(--red)">Mehr zu St. Ingbert →</a></p>
+      </article>
+
+      <article class="card">
+        <h2 style="font-size:1.15rem;margin:0 0 0.5rem">⚽ <a href="/neunkirchen/">Fotobox Neunkirchen &amp; Elversberg</a></h2>
+        <p style="margin:0 0 1rem;color:var(--grey);font-size:0.93rem">
+          VIP-Bereich der Ursapharm Arena, Sponsorenabende und Firmenfeiern im Industrie- und
+          Mittelstandsumfeld.
+        </p>
+        <p style="margin:0"><a href="/neunkirchen/" style="color:var(--red);font-weight:700;font-size:0.9rem;border-bottom:2px solid var(--red)">Mehr zu Neunkirchen →</a></p>
+      </article>
+
+      <article class="card">
+        <h2 style="font-size:1.15rem;margin:0 0 0.5rem">🛍️ <a href="/zweibruecken/">Fotobox Zweibrücken</a></h2>
+        <p style="margin:0 0 1rem;color:var(--grey);font-size:0.93rem">
+          Fashion Outlet, Handels- und Markenevents mit Publikumsverkehr — Sofortdruck als
+          Werbeträger direkt in der Hand der Besucher.
+        </p>
+        <p style="margin:0"><a href="/zweibruecken/" style="color:var(--red);font-weight:700;font-size:0.9rem;border-bottom:2px solid var(--red)">Mehr zu Zweibrücken →</a></p>
+      </article>
+
+      <article class="card">
+        <h2 style="font-size:1.15rem;margin:0 0 0.5rem">🏭 <a href="/saarlouis/">Fotobox Saarlouis &amp; Dillingen</a></h2>
+        <p style="margin:0 0 1rem;color:var(--grey);font-size:0.93rem">
+          Lockschuppen Dillingen, Stadthalle und Industriebetriebe — Jubiläen, Tage der offenen Tür
+          und Mitarbeiterfeste.
+        </p>
+        <p style="margin:0"><a href="/saarlouis/" style="color:var(--red);font-weight:700;font-size:0.9rem;border-bottom:2px solid var(--red)">Mehr zu Saarlouis →</a></p>
+      </article>
+
+      {% for stadt in staedteStandard %}
+      <article class="card">
+        <h2 style="font-size:1.15rem;margin:0 0 0.5rem">📌 <a href="/{{ stadt.slug }}/">Fotobox {{ stadt.name }}</a></h2>
+        <p style="margin:0 0 1rem;color:var(--grey);font-size:0.93rem">
+          {{ stadt.lead }} — Anfahrt von Saarbrücken {{ stadt.distance }} {{ stadt.direction }}.
+        </p>
+        <p style="margin:0"><a href="/{{ stadt.slug }}/" style="color:var(--red);font-weight:700;font-size:0.9rem;border-bottom:2px solid var(--red)">Mehr zu {{ stadt.name }} →</a></p>
+      </article>
+      {% endfor %}
+
+    </div>
+
+    <h2 style="margin-top:3rem">Ihre Stadt ist nicht dabei?</h2>
+    <p style="max-width:65ch">
+      Wir sind im gesamten Saarland unterwegs — Merzig, Lebach, Blieskastel, St. Wendel, Wadern,
+      Losheim, Mettlach, Tholey und die Gemeinden dazwischen. Auch deutschlandweit und in Luxemburg
+      waren wir regelmäßig im Einsatz, unter anderem in München, Köln, Frankfurt und Luxemburg-Stadt.
+      Sagen Sie uns einfach Ort und Datum, dann bekommen Sie ein Festpreis-Angebot.
+    </p>
+
+    <h2 style="margin-top:3rem">Anfahrt und Kosten</h2>
+    <p style="max-width:65ch">
+      Die ersten <strong>10 Kilometer Entfernung ab Saarbrücken sind in jedem Paket enthalten</strong>.
+      Liegt Ihre Location weiter entfernt, berechnen wir <strong>1,50 € je gefahrenem Kilometer für
+      Hin- und Rückweg, inklusive Fahrzeit und Personal</strong>. Lieferung, Aufbau, Abbau und
+      Abholung sind damit abgegolten. Alle Beispiele stehen auf der
+      <a href="/preise/">Preisseite</a>.
+    </p>
+
+    <h2 style="margin-top:3rem">Für welchen Anlass?</h2>
+    <p style="max-width:65ch">
+      Ob <a href="/anlaesse/firmenfeier/">Firmenfeier</a>,
+      <a href="/anlaesse/kundenevent/">Kundenevent</a>,
+      <a href="/anlaesse/messe/">Messe</a>,
+      <a href="/anlaesse/tag-der-offenen-tuer/">Tag der offenen Tür</a>,
+      <a href="/anlaesse/produkt-launch/">Produkt-Launch</a> oder
+      <a href="/anlaesse/hochzeit/">Hochzeit und Privatfeier</a> — das Setup bleibt dasselbe
+      Profi-Setup, nur Paket und Layout richten sich nach Ihrem Anlass.
+    </p>
+
+    <p style="margin-top:2.5rem;text-align:center">
+      <a class="btn btn--primary" href="/kontakt/">Unverbindlich anfragen</a>
+    </p>
+
+  </div>
+</section>
